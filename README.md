@@ -28,7 +28,7 @@ Our approach:
 
 ### Wireframes
 
-![wireframes](wireframe.png)
+<img src="./docs/wireframe.png">
 
 ## Technologies & Technical Challenges
   ##### Backend: Mongo/Express/Node.js
