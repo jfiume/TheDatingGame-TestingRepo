@@ -25,6 +25,10 @@ Our approach:
    - [ ] Add more filtering criteria
    - [ ] Filter pornographic material
 
+### Wireframes
+
+![wireframes](wireframe.png)
+
 ## Technologies & Technical Challenges
   ##### Backend: Mongo/Express/Node.js
   ##### Frontend: React Native
