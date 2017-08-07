@@ -1,29 +1,30 @@
 # The Dating Game
 
-### The Dating Game is a dating platform, it introduces the user that spectial someone in their area and who meet their criteria while playing a game
+The Dating Game is a mobile dating app that reimagines the mobile dating experience. Like other dating apps, users will be able to match and chat with other users in their area. However, after matching, the two users will be prompted with a game to play as an ice breaker.
 
 ## Background and Overview
 
-Meeting your significant other could be challenging with our modern life style. The rise of the dating apps on mobile phones which are extremely popluar faces the challange of walking into awkward conversations. Rating people based on a picture is shallow, hence we are intoducing the idea of matching people based on their prefernces, while playing a game that wpould facilitate an intial conversation.
+Modern dating apps are increasingly popular among young adults with busy lifestyles. Dating apps save time and effort by providing users with a list of other singles in their area that meet certain criteria - typically being within an age range and being of a specified gender. On almost all dating apps, when two users like each other, the app notifies the pair and a chat function is made available. Herein lies the problem: how do you start a conversation with an internet stranger that doesn't sound ridiculous, boring, repetitive, disingenuous, etc?
 
+The dating game solves this issue by prompting matches to play simple, yet conversation inducing games with one another. We view the term "dating" apps as a misnomer - these are introduction apps. Our goal is to provide our users with a better way to get to know each other by breaking the ice for them, in a fun and organic way.
 
 Our approach:
-  * Query the database for users who fit your criteria in your area
-  * Initialize a game between two users who fit the creteria
-  * Implement a websocket chat feature so users can talk while playing
+  * Allow users to create a profile and specify the gender and age range of prospects
+  * Match users who fit each others' specified criteria and live in the same city
+  * Prompt them to play a fun, yet simple game to organically provide a conversation starter
+  * Provide them with full chat functionality to get to know one another
 
-## Functionality & MVP
-
-   - [ ] Sign up, create a profile
-   - [ ] Participate in a 2 player game with people who meet the user's criteria
-   - [ ] Chat feature that works consequetly while playing
+## Functionality & MVP   
+   - [ ] Learn and implement an MERNN stack (Mongo DB, Express, React-Native, Node.js)
+   - [ ] Sign up users that create a profile and specify prospect criteria
+   - [ ] Users can be matched with other users
+   - [ ] Allow chat functionality between users
 
 #### Bonus Features
-   - [ ] Block users you don't want to interact with
-   - [ ] Delete your profile
-   - [ ] Add a second game
-   - [ ] Add more filtering criteria
-   - [ ] Filter pornographic material
+   - [ ] OAuth
+   - [ ] Users can play games
+   - [ ] Users can add multiple photos
+   - [ ] Users can play additional rounds
 
 ### Wireframes
 
@@ -35,32 +36,18 @@ Our approach:
 
 #### Composing our data
   + ##### Users
-    + Users create their own profiles and enter their basic info and prefrences.
-    + For basic info: email, password, first name, age, zip location, sexual preference, gender
-    + For preferences: radius of search based on location, gender, age range, hobbies(choose from a list)
+    + Users create profiles and enter their basic info and preferences
+    + For basic info: email, password, name, age, zip location, sexual preference, gender
+    + For preferences: city, gender, age range, hobbies(choose from a list)
 
   + ##### Games
     + For our first game, we are implementing "Would You Rather?"
-    + Implement hundrends of game questions and store the results with the user's information, so that next time you will be matched with someone who answered simliarly to you. (based on a 	percentage)
-
-#### Constructing the chat functionality
-  + ##### Building websocket.io
-    - Build the ability to chat in express using websocket.io
-  + ##### Integrating the chat functionality in the game
-    - We intend to initialize chat with new users only during the game
-  + ##### Integrating the chat functionality outside the game
-    - You can only chat with people you initialized a conversation with before during a game
-
-#### UX
-  + ##### Frontend Interface
-    - We will implement the ability of sign up, and get matched based on your prefrences
-    - We will match the user with another user and start the game for them
-    - We will initialize the chat for them and ask them basic introductory questions
+    + Implement a list of game questions and store the results with the user's information
 
   + #### Backend
     + Our backend will be a standard Node.js
-    + The backend will make hand over a matching user when a game initlize request is sent
-    + The backend will handle the chat functinality and storage of chat history
+    + The backend will make hand over a matching user when a game initialize request is sent
+    + The backend will handle the chat functionality and storage of chat history
 
 ## Accomplished over the Weekend
  - Identified our Technologies and watched classes on setting it up
@@ -75,28 +62,27 @@ Our approach:
 **Ryan Rolfes**,
 **Younis Hamalawy**
 
-***BACKEND TEAM: Chris and Joseph
-FRONTEND TEAM: Ryan and Younis
 
 ### Day 1
-  - Initialize OAUTH **BACKEND TEAM**
-  - Initialize frontend views **FRONTEND TEAM**
+  - Set up backend AUTH (potentially OAuth)
+  - Set up front end and build components and views for sign in/up
 
 ### Day 2
-  - Finalize and test OAUTH **BACKEND TEAM**
-  - Finalize and test frontend views **FRONTEND TEAM**
+  - Finalize and test AUTH
+  - Finalize and test frontend sign in/up
 
 ### Day 3
-  - Initialize Chat funtionality **BACKEND TEAM**
-  - Initialize Game logic **FRONTEND TEAM**
+  - Create an index of prospects for a user based on specified age, location, and gender filters
 
 ### Day 4
-  - Finalize and test Chat functionality **BACKEND TEAM**
-  - Finalize and test Game logic **FRONTEND TEAM**
+  - Build and test front and back end for chat functionality
 
 ### Day 5, 6
-  - Combine the two skeletons and test **WHOLE TEAM**
+  - Implement matching and user notifications for a match
+  - Finalize and test chat functionality
+  - Add ability for matches to play games
+
 ### Day 7
- - Production Read me **BACKEND TEAM**
- - Improve UX **FRONTEND TEAM**
- - Seed the database **BACKEND TEAM**
+ - Production Read me
+ - Improve UX
+ - Seed the database
