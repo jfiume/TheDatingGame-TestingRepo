@@ -20,8 +20,6 @@
       city: "San Francisco",
       state: "California"
       // Pull city from FB
-      city: "San Francisco",
-      state: "California"
       // No password_digest, correct?
       // Believe we still need a session_token, but lmk if not
       session_token: "akasdhfakj807q36",
