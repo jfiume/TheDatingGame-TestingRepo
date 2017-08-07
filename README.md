@@ -15,7 +15,7 @@ Our approach:
   * Provide them with full chat functionality to get to know one another
 
 ## Functionality & MVP   
-   - [ ] Learn and implement an MERNN stack (Mongo DB, Express, React-Native, Node.js)
+   - [ ] Learn and implement a MERNN stack (Mongo DB, Express, React-Native, Node.js)
    - [ ] Sign up users that create a profile and specify prospect criteria
    - [ ] Users can be matched with other users
    - [ ] Allow chat functionality between users
@@ -45,8 +45,8 @@ Our approach:
     + Implement a list of game questions and store the results with the user's information
 
   + #### Backend
-    + Our backend will be a standard Node.js
-    + The backend will make hand over a matching user when a game initialize request is sent
+    + Our backend will be a Mongo DB with an Express framework written in Node.js
+    + The backend will match users and create a chat
     + The backend will handle the chat functionality and storage of chat history
 
 ## Accomplished over the Weekend
