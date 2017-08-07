@@ -19,6 +19,11 @@
       age_range_high: 29,
       city: "San Francisco",
       state: "California"
+      // Pull city from FB
+      city: "San Francisco",
+      state: "California"
+      // No password_digest, correct?
+      // Believe we still need a session_token, but lmk if not
       session_token: "akasdhfakj807q36",
       occupation: "Software Developer",
       school: "Stanford University",
@@ -27,6 +32,8 @@
       interested_in: "Women",
       liked_users: [7892, 8997, 9877],
       disliked_users: [344, 8787, 3432, 454, 87999],
+      interested_in: "Women",
+      liked_users: [7892, 8997, 9877],
       chats: [3987, 5663, 6945, 7778],
       matched_users: [234, 6787, 8976]
     }
@@ -46,7 +53,7 @@
     1: {
       author_id: 1,
       message_origination_time: 1502067019040,
-      message_content: "Hey, Sara! Where do you work that you'd rather show up naked?!" + :stuck_out_tongue_winking_eye:
+      message_content: "Hey, Sara! Where do you work that you'd rather show up naked?!"
     }
   }
 
