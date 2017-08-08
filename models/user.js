@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
-const uuid = require('uuid');
+// const uuid = require('uuid');
 
 const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/TheDatingGame');
+// mongoose.connect('mongodb://localhost/TheDatingGame');
 
 
 const userSchema = new mongoose.Schema({
