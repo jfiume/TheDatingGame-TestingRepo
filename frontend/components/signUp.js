@@ -31,7 +31,7 @@ export default class SignUp extends Component {
   render() {
     return (
       <ImageBackground
-        source={require('../assets/splash.jpg')}
+        source={require("../../assets/images/splash2.jpg")}
         style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
-    fontFamily: 'Noteworthy'
+    // fontFamily: 'Noteworthy'
   },
   signin: {
     alignSelf: 'center',
