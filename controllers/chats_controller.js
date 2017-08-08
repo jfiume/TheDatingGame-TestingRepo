@@ -1,3 +1,5 @@
+const user = require('../models/chats');
+
 exports.create = function(req, res, next) {
   let user = req.user;
   let userId = user.idea;
