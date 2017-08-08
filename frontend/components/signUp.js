@@ -6,7 +6,7 @@ import {
   View,
   TouchableOpacity,
   Linking,
-  Image
+  ImageBackground
 } from 'react-native';
 
 export default class SignUp extends Component {
@@ -30,8 +30,8 @@ export default class SignUp extends Component {
   }
   render() {
     return (
-      <Image
-        source={require('../assets/splash4.jpg')}
+      <ImageBackground
+        source={require('../assets/splash.jpg')}
         style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>
@@ -52,7 +52,7 @@ export default class SignUp extends Component {
             </Text>
           </View>
         </View>
-      </Image>
+      </ImageBackground>
     );
   }
 }
