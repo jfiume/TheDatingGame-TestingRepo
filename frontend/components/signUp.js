@@ -30,7 +30,6 @@ export default class SignUp extends Component {
   }
   render() {
     return (
-
       <Image
         source={require('../assets/splash4.jpg')}
         style={styles.container}>
