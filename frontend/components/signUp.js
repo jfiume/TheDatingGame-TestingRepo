@@ -64,9 +64,9 @@ const styles = StyleSheet.create({
     width: undefined,
     height: undefined,
     justifyContent: 'space-between',
-    borderRadius: 4,
-    borderWidth: 0.5,
-    borderColor: 'blue',
+    // borderRadius: 4,
+    // borderWidth: 0.5,
+    // borderColor: 'blue',
   },
   header: {
     marginTop: 70,
@@ -83,8 +83,8 @@ const styles = StyleSheet.create({
   },
   signin: {
     alignSelf: 'center',
-    borderRadius: 90,
-    borderWidth: 3,
+    borderRadius: 25,
+    borderWidth: 2.5,
     borderColor: 'white',
     backgroundColor: 'transparent',
     width: 320
