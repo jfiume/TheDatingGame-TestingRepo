@@ -64,6 +64,7 @@ const styles = StyleSheet.create({
     width: undefined,
     height: undefined,
     justifyContent: 'space-between',
+    borderRadius: 4,
   },
   welcome: {
     fontSize: 20,
