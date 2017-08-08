@@ -77,8 +77,9 @@ const styles = StyleSheet.create({
     fontSize: 35,
     textAlign: 'center',
     color: 'white',
-    fontWeight: 'bold',
-    // fontFamily: 'Noteworthy'
+    fontFamily: 'AvenirNext-Medium',
+    // fontWeight: 'bold',
+    // fontStyle: 'italic'
   },
   signin: {
     alignSelf: 'center',
@@ -96,7 +97,8 @@ const styles = StyleSheet.create({
     paddingBottom: 13,
     paddingRight: 20,
     paddingLeft: 20,
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'AvenirNext-Medium',
   },
   footer: {
     marginTop: 65,
@@ -108,6 +110,7 @@ const styles = StyleSheet.create({
     fontSize: 13,
     textAlign: 'center',
     color: 'white',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    fontFamily: 'AvenirNext-Medium',
   }
 });
