@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/TheDatingGame');
 
+
 const userSchema = new mongoose.Schema({
   email: {
     type: String,
