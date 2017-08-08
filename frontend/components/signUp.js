@@ -5,7 +5,8 @@ import {
   Text,
   View,
   TouchableOpacity,
-  Linking
+  Linking,
+  Image
 } from 'react-native';
 
 export default class SignUp extends Component {
