@@ -5,25 +5,22 @@ const Schema = mongoose.Schema;
 
 mongoose.connect('mongodb://localhost/TheDatingGame');
 
-const usersSchema = new Schema({
-  Objectid: {
-    firstName: { type: String },
-    lastName: { type: String },
-    age: { type: Number },
-    sex: { type: String },
-    ageRangeLow: { type: Number },
-    ageRangeHigh: { type: Number },
-    city: { type: String },
-    state: { type: String },
-    fbCity: { type: String },
-    fbState: { type: String },
-    sessionToken: { type: String },
-    occupation: { type: String },
-    school: { type: String },
-    imageUrl: { type: String },
-    aboutMe: { type: String },
-    interestedIn: { type: String },
-    likedUsers: { type: Array },
-    dislikedUsers: { type: Array }
-  }
+const userSchema = new mongoose.Schema({
+  email: {
+    type: String,
+    unique: true,
+    lowercase: true,
+    required: true
+  },
+  facebook_id: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  name: {
+    type: String,
+    required: true
+  },
 });
+
+module.exports = mongoose.model('user', userSchema);
