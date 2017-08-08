@@ -46,6 +46,7 @@ export default class theDatingGame extends Component {
             Facebook Login!
           </Text>
         </TouchableOpacity>
+
       </View>
     );
   }
