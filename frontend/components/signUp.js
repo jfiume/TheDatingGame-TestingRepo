@@ -73,4 +73,11 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: 'transparent',
   },
+  headerText: {
+    fontSize: 35,
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 'bold',
+    fontFamily: 'Noteworthy'
+  },
 });
