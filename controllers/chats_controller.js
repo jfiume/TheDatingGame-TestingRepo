@@ -10,3 +10,22 @@ exports.create = function(req, res, next) {
     res.json(messages, userIds, playedGames);
   });
 };
+
+exports.index = function(req, res, next) {
+  res.json(req.user.chats);
+};
+
+exports.destroy = function(req, res, next) {
+  const user = req.user;
+  const chatId = req.params.chatId;
+  user.chats = user.chats.filter((chat) => {
+    if (chatId === chat.id) {
+      return false;
+    }
+    return true;
+  });
+  user.save(function(err) {
+    if (err) { return next(err); }
+    res.json({});
+  });
+};
