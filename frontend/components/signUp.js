@@ -60,8 +60,9 @@ export default class SignUp extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    // remove width and height to override fixed static size
+    width: undefined,
+    height: undefined,
     backgroundColor: '#F5FCFF',
   },
   welcome: {
