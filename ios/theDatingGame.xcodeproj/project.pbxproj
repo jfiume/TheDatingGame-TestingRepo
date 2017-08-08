@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
 		00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302BA1ABCB90400DB3ED1 /* libRCTGeolocation.a */; };
@@ -36,6 +35,13 @@
 		2DCD954D1E0B4F2C00145EB5 /* theDatingGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* theDatingGameTests.m */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		91E39C6D17A44740AB81F7FF /* Aller_Bd.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 831A8B22EBE54728A90E26D8 /* Aller_Bd.ttf */; };
+		2BB588A1346E42BBA74DB84E /* Aller_BdIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E0203B55D85D43B1AD2EC989 /* Aller_BdIt.ttf */; };
+		BCB5AA5805954F33B31BB5D3 /* Aller_It.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FBE5262268934CD3ABD5E0D6 /* Aller_It.ttf */; };
+		AD0FC7ECBA0647E8A31D14AF /* Aller_Lt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC31CFE581184657A665F67D /* Aller_Lt.ttf */; };
+		BD86882CFD854B23A7DE0C86 /* Aller_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E06D9F9764041ECB40987D7 /* Aller_LtIt.ttf */; };
+		45AF23E50F7D4A69B0398471 /* Aller_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DD0FF88D1E842B5B5F0B582 /* Aller_Rg.ttf */; };
+		AFF5A4D16C19489BA571778B /* AllerDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2CA6C7AE34B4174959F51E4 /* AllerDisplay.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -255,6 +261,13 @@
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		831A8B22EBE54728A90E26D8 /* Aller_Bd.ttf */ = {isa = PBXFileReference; name = "Aller_Bd.ttf"; path = "../assets/fonts/Aller_Bd.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E0203B55D85D43B1AD2EC989 /* Aller_BdIt.ttf */ = {isa = PBXFileReference; name = "Aller_BdIt.ttf"; path = "../assets/fonts/Aller_BdIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FBE5262268934CD3ABD5E0D6 /* Aller_It.ttf */ = {isa = PBXFileReference; name = "Aller_It.ttf"; path = "../assets/fonts/Aller_It.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EC31CFE581184657A665F67D /* Aller_Lt.ttf */ = {isa = PBXFileReference; name = "Aller_Lt.ttf"; path = "../assets/fonts/Aller_Lt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9E06D9F9764041ECB40987D7 /* Aller_LtIt.ttf */ = {isa = PBXFileReference; name = "Aller_LtIt.ttf"; path = "../assets/fonts/Aller_LtIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5DD0FF88D1E842B5B5F0B582 /* Aller_Rg.ttf */ = {isa = PBXFileReference; name = "Aller_Rg.ttf"; path = "../assets/fonts/Aller_Rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F2CA6C7AE34B4174959F51E4 /* AllerDisplay.ttf */ = {isa = PBXFileReference; name = "AllerDisplay.ttf"; path = "../assets/fonts/AllerDisplay.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -467,6 +480,7 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* theDatingGameTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				A9C5B0B4C6B349EBA1CDD82E /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -482,6 +496,21 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		A9C5B0B4C6B349EBA1CDD82E /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				831A8B22EBE54728A90E26D8 /* Aller_Bd.ttf */,
+				E0203B55D85D43B1AD2EC989 /* Aller_BdIt.ttf */,
+				FBE5262268934CD3ABD5E0D6 /* Aller_It.ttf */,
+				EC31CFE581184657A665F67D /* Aller_Lt.ttf */,
+				9E06D9F9764041ECB40987D7 /* Aller_LtIt.ttf */,
+				5DD0FF88D1E842B5B5F0B582 /* Aller_Rg.ttf */,
+				F2CA6C7AE34B4174959F51E4 /* AllerDisplay.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -564,7 +593,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 610;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -841,6 +870,13 @@
 			files = (
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
+				91E39C6D17A44740AB81F7FF /* Aller_Bd.ttf in Resources */,
+				2BB588A1346E42BBA74DB84E /* Aller_BdIt.ttf in Resources */,
+				BCB5AA5805954F33B31BB5D3 /* Aller_It.ttf in Resources */,
+				AD0FC7ECBA0647E8A31D14AF /* Aller_Lt.ttf in Resources */,
+				BD86882CFD854B23A7DE0C86 /* Aller_LtIt.ttf in Resources */,
+				45AF23E50F7D4A69B0398471 /* Aller_Rg.ttf in Resources */,
+				AFF5A4D16C19489BA571778B /* AllerDisplay.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
