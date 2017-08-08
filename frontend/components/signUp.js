@@ -66,10 +66,11 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderRadius: 4,
     borderWidth: 0.5,
+    borderColor: 'blue',
   },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  }
+  header: {
+    marginTop: 70,
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+  },
 });
