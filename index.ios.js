@@ -9,6 +9,7 @@ import {
   Linking
 } from 'react-native';
 
+
 export default class theDatingGame extends Component {
   _facebookLogin() {
     Linking.openURL([
@@ -46,7 +47,6 @@ export default class theDatingGame extends Component {
             Facebook Login!
           </Text>
         </TouchableOpacity>
-
       </View>
     );
   }
