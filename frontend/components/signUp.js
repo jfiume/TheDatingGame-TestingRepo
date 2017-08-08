@@ -30,13 +30,30 @@ export default class SignUp extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <TouchableOpacity onPress={this._facebookLogin}>
-          <Text style={styles.welcome}>
-            Facebook Login!
+
+      <Image
+        source={require('../assets/splash4.jpg')}
+        style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.headerText}>
+            the Dating Game
           </Text>
-        </TouchableOpacity>
-      </View>
+        </View>
+        <View>
+          <View style={styles.signin}>
+            <TouchableOpacity onPress={this._facebookLogin}>
+              <Text style={styles.signinText}>
+                Sign in with Facebook
+              </Text>
+            </TouchableOpacity>
+          </View>
+          <View style={styles.footer}>
+            <Text style={styles.footerText}>
+              Don't worry! We never post to Facebook.
+            </Text>
+          </View>
+        </View>
+      </Image>
     );
   }
 }
