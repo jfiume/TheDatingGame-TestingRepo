@@ -80,4 +80,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     fontFamily: 'Noteworthy'
   },
+  signin: {
+    alignSelf: 'center',
+    borderRadius: 90,
+    borderWidth: 3,
+    borderColor: 'white',
+    backgroundColor: 'transparent',
+    width: 320
+  },
 });
