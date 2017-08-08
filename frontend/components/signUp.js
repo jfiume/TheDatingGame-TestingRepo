@@ -104,4 +104,10 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     paddingBottom: 35
   },
+  footerText: {
+    fontSize: 13,
+    textAlign: 'center',
+    color: 'white',
+    fontWeight: 'bold'
+  }
 });
