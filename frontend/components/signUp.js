@@ -88,4 +88,14 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
     width: 320
   },
+  signinText: {
+    fontSize: 17,
+    textAlign: 'center',
+    color: 'white',
+    paddingTop: 13,
+    paddingBottom: 13,
+    paddingRight: 20,
+    paddingLeft: 20,
+    fontWeight: 'bold'
+  },
 });
