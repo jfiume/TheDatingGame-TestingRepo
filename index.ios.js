@@ -8,6 +8,7 @@ import {
   TouchableOpacity,
   Linking
 } from 'react-native';
+import SignUp from './frontend/components/signUp';
 
 
 export default class theDatingGame extends Component {
@@ -43,9 +44,7 @@ export default class theDatingGame extends Component {
     return (
       <View style={styles.container}>
         <TouchableOpacity onPress={this._facebookLogin}>
-          <Text style={styles.welcome}>
-            Facebook Login!
-          </Text>
+          <SignUp />
         </TouchableOpacity>
       </View>
     );
