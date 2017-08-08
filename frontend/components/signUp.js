@@ -15,7 +15,7 @@ export default class SignUp extends Component {
     // implement yours in a safer way
     console.log(event.url.split('#')[1].split('=')[1].split('&')[0]);
   }
-  _facebookLogin() {
+  _facebookLogin() { // CHRIS gonna make changes to GET user info request
     Linking.openURL([
       'https://graph.facebook.com/oauth/authorize',
       '?response_type=token',

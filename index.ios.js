@@ -11,13 +11,13 @@ import {
   Text,
   View
 } from 'react-native';
-import SignUp from './frontend/components/signUp';
+import App from './frontend/App';
 
 export default class theDatingGame extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <SignUp />
+        <App />
       </View>
     );
   }
