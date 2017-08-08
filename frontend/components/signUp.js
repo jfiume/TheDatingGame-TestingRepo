@@ -98,4 +98,10 @@ const styles = StyleSheet.create({
     paddingLeft: 20,
     fontWeight: 'bold'
   },
+  footer: {
+    marginTop: 65,
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+    paddingBottom: 35
+  },
 });
