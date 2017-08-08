@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     // remove width and height to override fixed static size
     width: undefined,
     height: undefined,
-    backgroundColor: '#F5FCFF',
+    justifyContent: 'space-between',
   },
   welcome: {
     fontSize: 20,
