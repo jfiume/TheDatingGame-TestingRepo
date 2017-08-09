@@ -10,7 +10,6 @@ import {
 } from 'react-native';
 
 
-
 export default class theDatingGame extends Component {
   _facebookLogin() {
     Linking.openURL([
