@@ -138,6 +138,11 @@ const styles = StyleSheet.create({
     borderRadius: 7,
     borderWidth: 1.5,
     borderColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignContent: 'center',
+    // textAlign: 'center',
+
   },
   instructionsNumber: {
     fontSize: 15,
@@ -154,8 +159,8 @@ const styles = StyleSheet.create({
     // paddingLeft: 6,
     // marginTop: 3,
     marginRight: 15,
-    width: 23,
-    height: 23,
+    // width: 23,
+    // height: 23,
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
