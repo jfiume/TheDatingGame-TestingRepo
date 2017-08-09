@@ -141,7 +141,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
-    // textAlign: 'center',
+    marginRight: 15,
+    width: 23,
+    height: 23,
 
   },
   instructionsNumber: {
@@ -158,7 +160,7 @@ const styles = StyleSheet.create({
     // paddingRight: 6,
     // paddingLeft: 6,
     // marginTop: 3,
-    marginRight: 15,
+    // marginRight: 15,
     // width: 23,
     // height: 23,
     alignItems: 'center',
