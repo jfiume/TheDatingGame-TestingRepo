@@ -32,25 +32,31 @@ export default class Instructions extends Component {
 
         <View style={styles.instructions}>
           <View style={styles.instructionsline}>
-            <Text style={styles.instructionsNumber}>
-              1
-            </Text>
+            <View style={styles.instructionsNumberContainer}>
+              <Text style={styles.instructionsNumber}>
+                1
+              </Text>
+            </View>
             <Text style={styles.instructionsText}>
               Two people like each other & its a match...
             </Text>
           </View>
           <View style={styles.instructionsline}>
-            <Text style={styles.instructionsNumber}>
-              2
-            </Text>
+            <View style={styles.instructionsNumberContainer}>
+              <Text style={styles.instructionsNumber}>
+                2
+              </Text>
+            </View>
             <Text style={styles.instructionsText}>
               They start playing the game,
             </Text>
           </View>
           <View style={styles.instructionsline}>
-            <Text style={styles.instructionsNumber}>
-              3
-            </Text>
+            <View style={styles.instructionsNumberContainer}>
+              <Text style={styles.instructionsNumber}>
+                3
+              </Text>
+            </View>
             <Text style={styles.instructionsText}>
               they start chatting,
             </Text>
