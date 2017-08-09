@@ -14,6 +14,7 @@ export default class Instructions extends Component {
   componentDidMount() {
     //at this point we need to query the databasy for all the potential
     // matches for this user
+    // this.props.fetchProspectMatch();
   }
   render() {
     return (
@@ -29,18 +30,18 @@ export default class Instructions extends Component {
           </Text>
         </View>
         <View>
-          <View style={styles.signin}>
-            <TouchableOpacity onPress={this._facebookLogin}>
-              <Text style={styles.signinText}>
-                Sign in with Facebook
-              </Text>
-            </TouchableOpacity>
-          </View>
-          <View style={styles.footer}>
-            <Text style={styles.footerText}>
+          <View style={styles.instrctions}>
+            <Text style={styles.instrction_text}>
               Dont worry! We never post to Facebook.
             </Text>
           </View>
+        </View>
+        <View style={styles.signin}>
+        <TouchableOpacity onPress={this._facebookLogin}>
+        <Text style={styles.signinText}>
+        Sign in with Facebook
+        </Text>
+        </TouchableOpacity>
         </View>
       </ImageBackground>
     );

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
-import ProspectItemReducer from './ProspectItem';
+import ProspectDetailReducer from './ProspectDetailReducer';
 
 export default combineReducers({
-  ProspectItem: ProspectItemReducer
+  ProspectDetail: ProspectDetailReducer
 });
