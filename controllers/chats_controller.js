@@ -9,9 +9,10 @@ exports.create = function(req, res, next) {
     user_ids: User.id,
     played_games: TextGames
   });
-  Chat.save(
-    res.json()
-  );
+  chat.save(function(err) {
+    if (err) { return next(err); }
+    res.json(chat.messages);
+  });
 };
 
 exports.index = function(req, res, next) {

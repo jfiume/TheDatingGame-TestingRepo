@@ -9,33 +9,34 @@ let requireAuth = passport.authenticate('jwt', {session: false});
 let requireLogin = passport.authenticate('local', {session: false});
 let router = require('express').Router();
 
-function test (req, res, next){
-  res.send("Test: Do I work?");
-}
- 
+
+
 router.route('/test')
-  .get(test);
+  .post(UserController.test);
 
 // Auth Routes
 // -----------------------------------------------------------------------------
-router.route('/signup')
-  .post(AuthenticationController.signup);
-router.route('/signin')
-  .post([requireLogin, AuthenticationController.signin]);
+// router.route('/signup')
+//   .post(AuthenticationController.signup);
+// router.route('/signin')
+//   .post([requireLogin, AuthenticationController.signin]);
 
+
+router.route('/signup')
+  .post(UserController.create);
 
 // User Routes
 // -----------------------------------------------------------------------------
-router.route('/update')
-  .patch(requireAuth, UserController.update);
+// router.route('/update')
+//   .patch(requireAuth, UserController.update);
 router.route('/show')
   .get([requireAuth, UserController.show]);
 router.route('/index')
   .get([requireAuth, UserController.index]);
 
 // Testing Postman
-router.route('/new')
-  .post(UserController.create);
+// router.route('/new')
+//   .post(UserController.create);
 
 
 // Chat Routes
@@ -47,7 +48,7 @@ router.route('/chat')
   .post(ChatController.create);
   // .get(ChatController.show);
 
-router.route('/chats/:chat_id')
+router.route('/chats/:id')
   .delete(ChatController.destroy);
   // .get(ChatController.destroy);
 
