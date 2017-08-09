@@ -23,7 +23,7 @@ app.use(morgan('combined'));
 app.use(bodyParser.json({type:'*/*'}));
 app.use('/v1', router);
 
-app.listen(3000, function(err) {
+app.listen(3000, '127.0.0.1', function(err) {
   if (err) { return console.log(err); }
   console.log("Listening on port 3000.");
 });
