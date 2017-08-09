@@ -1,20 +1,25 @@
-const user = require('../models/chats');
+const User = require('../models/chats');
+const Messages = require('../models/messages');
+const TextGames = require('../models/text_games');
+const Chat = require('../models/chats');
 
 exports.create = function(req, res, next) {
-  let user = req.user;
-  let userId = user.idea;
-  let userIds = [];
-  userIds.push(userId);
-
-
-  user.save(function(err) {
-    if (err) { return next(err); }
-    res.json(messages, userIds, playedGames);
+  let chat = new Chat({
+    messages: Messages,
+    user_ids: User.id,
+    played_games: TextGames
   });
+  Chat.save(
+    res.json()
+  );
 };
 
 exports.index = function(req, res, next) {
-  res.json(req.user.chats);
+  res.json(Chat);
+};
+
+exports.show = function(req, res, next) {
+  res.json(req.Chat.id);
 };
 
 exports.destroy = function(req, res, next) {

@@ -12,3 +12,5 @@ const chatsSchema = new Schema({
     played_games: { type: Array }
   }
 });
+
+module.exports = mongoose.model('chat', chatsSchema);

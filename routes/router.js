@@ -34,11 +34,15 @@ router.route('/new')
 
 // Chat Routes
 // -----------------------------------------------------------------------------
-router.route('/users/:user_id/chats')
-  .post(requireAuth, ChatController.create)
-  .get(requireAuth, ChatController.index);
+router.route('/chats')
+  .post(ChatController.index);
 
-router.route('/users/:user_id/chats/:chat_id')
-  .delete(requireAuth, ChatController.destroy);
+router.route('/chat')
+  .post(ChatController.create);
+  .get(ChatController.show);
+
+router.route('/chats/:chat_id')
+  .delete(ChatController.destroy);
+  .get(ChatController.destroy);
 
 module.exports = router;

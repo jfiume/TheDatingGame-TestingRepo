@@ -1,19 +1,19 @@
 const jwt = require('jwt-simple');
 const User = require('../models/user');
 const axios = require('axios');
-const SECRET = require('../config').SECRET;
+// const SECRET = require('../config').SECRET;
 
 function tokenForUser (user) {
   let obj = {
     sub: user._id,
     iat: new Date().getTime()
   };
-  return jwt.encode(obj, SECRET);
+  // return jwt.encode(obj, SECRET);
 }
 
 exports.requireAuth = function(req, res, next) {
   let authHeader = req.get('Authorization');
-  let jwtToken = jwt.decode(authHeader, SECRET);
+  let jwtToken = jwt.decode(authHeader);
   let user_id = jwtToken.sub;
   User.findById(user_id, function(err, user) {
     if (err) { return next(err); }
