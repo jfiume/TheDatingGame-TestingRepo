@@ -15,11 +15,11 @@ exports.create = function(req, res, next) {
 };
 
 exports.index = function(req, res, next) {
-  res.json(Chat);
+  res.json(req.chat);
 };
 
 exports.show = function(req, res, next) {
-  res.json(req.Chat.id);
+  res.json(req.chat.id);
 };
 
 exports.destroy = function(req, res, next) {

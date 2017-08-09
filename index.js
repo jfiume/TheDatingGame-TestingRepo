@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const AuthController = require('./controllers/auth_controller');
 
 const app = express();
-const router = express.Router();
+const router = require('./routes/router');
 
 mongoose.connect('mongodb://localhost:testOauth/testOauth');
 

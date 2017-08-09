@@ -3,7 +3,7 @@ const uuid = require('uuid');
 
 const Schema = mongoose.Schema;
 
-mongoose.connect('mongodb://localhost/TheDatingGame');
+// mongoose.connect('mongodb://localhost:3000/TheDatingGame');
 
 const chatsSchema = new Schema({
   Objectid: {

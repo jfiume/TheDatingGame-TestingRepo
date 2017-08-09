@@ -9,6 +9,12 @@ let requireAuth = passport.authenticate('jwt', {session: false});
 let requireLogin = passport.authenticate('local', {session: false});
 let router = require('express').Router();
 
+function test (req, res, next){
+  res.send("Test: Do I work?");
+}
+ 
+router.route('/test')
+  .get(test);
 
 // Auth Routes
 // -----------------------------------------------------------------------------
@@ -39,10 +45,10 @@ router.route('/chats')
 
 router.route('/chat')
   .post(ChatController.create);
-  .get(ChatController.show);
+  // .get(ChatController.show);
 
 router.route('/chats/:chat_id')
   .delete(ChatController.destroy);
-  .get(ChatController.destroy);
+  // .get(ChatController.destroy);
 
 module.exports = router;
