@@ -143,7 +143,7 @@ const styles = StyleSheet.create({
   instructionsNumberContainer: {
     borderRadius: 7,
     borderWidth: 1.5,
-    borderColor: 'white',
+    borderColor: '#FFFFF0',
     alignItems: 'center',
     justifyContent: 'center',
     alignContent: 'center',
