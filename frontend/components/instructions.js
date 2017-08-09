@@ -23,31 +23,31 @@ export default class Instructions extends Component {
         style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>
-            TDG
+            theDatingGame,
           </Text>
           <Text style={styles.secondHeaderText}>
-            lets have fun
+            lets have fun!
           </Text>
         </View>
         <View>
-          <View style={styles.instrctions}>
-            <Text style={styles.instrctionsText}>
+          <View style={styles.instructions}>
+            <Text style={styles.instructionsText}>
               Two people like each other and its a match...
             </Text>
-          </View>
-            <Text style={styles.instrctionsText}>
+            <Text style={styles.instructionsText}>
               They start playing the game
             </Text>
-            <Text style={styles.instrctionsText}>
+            <Text style={styles.instructionsText}>
               ...and they start chatting,
             </Text>
-            <Text style={styles.instrctionsText}>
+            <Text style={styles.instructionsText}>
               then shit gets real!
             </Text>
+          </View>
         </View>
-        <View style={styles.signin}>
+        <View style={styles.next}>
         <TouchableOpacity >
-          <Text style={styles.signinText}>
+          <Text style={styles.nextButton}>
             X
           </Text>
         </TouchableOpacity>
@@ -69,52 +69,57 @@ const styles = StyleSheet.create({
     // borderColor: 'blue',
   },
   header: {
-    marginTop: 100,
+    marginTop: 200,
     alignItems: 'center',
     backgroundColor: 'transparent',
   },
   headerText: {
-    fontSize: 35,
+    fontSize: 25,
     textAlign: 'center',
     color: 'white',
     fontFamily: 'AvenirNext-Medium',
     // fontWeight: 'bold',
     // fontStyle: 'italic'
   },
-  signin: {
-    alignSelf: 'center',
-    borderRadius: 90,
-    borderWidth: 2.5,
-    borderColor: 'white',
-    backgroundColor: 'transparent'
-  },
-  signinText: {
-    fontSize: 25,
+  secondHeaderText: {
+    fontSize: 35,
     textAlign: 'center',
     color: 'white',
-    paddingTop: 2,
-    paddingBottom: 2,
-    paddingRight: 5,
-    paddingLeft: 5,
-    fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium',
-  }
+    fontFamily: 'GillSans-Italic',
+    fontWeight: 'bold'
+  },
   instructions: {
     alignSelf: 'center',
-    borderRadius: 90,
-    borderWidth: 2.5,
-    borderColor: 'white',
     backgroundColor: 'transparent'
   },
   instructionsText: {
+    fontSize: 15,
+    // textAlign: 'center',
+    color: 'white',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingRight: 10,
+    paddingLeft: 15,
+    // fontWeight: 'bold',
+    fontFamily: 'AvenirNext-Medium',
+  },
+  next: {
+    alignSelf: 'center',
+    borderRadius: 50,
+    borderWidth: 2.5,
+    borderColor: 'white',
+    backgroundColor: 'transparent',
+    marginBottom: 40
+  },
+  nextButton: {
     fontSize: 25,
     textAlign: 'center',
     color: 'white',
-    paddingTop: 2,
-    paddingBottom: 2,
-    paddingRight: 5,
-    paddingLeft: 5,
-    fontWeight: 'bold',
+    paddingTop: 5,
+    paddingBottom: 5,
+    paddingRight: 10,
+    paddingLeft: 10,
+    // fontWeight: 'bold',
     fontFamily: 'AvenirNext-Medium',
   }
 });
