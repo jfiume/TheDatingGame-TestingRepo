@@ -71,13 +71,7 @@ export default class ProspectDetails extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // remove width and height to override fixed static size
-    // width: undefined,
-    // height: undefined,
     justifyContent: 'space-between',
-    // borderRadius: 4,
-    // borderWidth: 0.5,
-    // borderColor: 'blue',
     padding: 10,
   },
 
@@ -109,15 +103,12 @@ const styles = StyleSheet.create({
   imageContainer: {
     flex: 1,
     borderRadius: 15,
-                            // borderTopRightRadius: 10,
-                            overflow: 'hidden',
-                            // height: 205,
+    overflow: 'hidden',
+    marginTop:10
   },
   image: {
     flex: 1,
-    // borderRadius: 5,
-    // borderWidth: 5,
-    // borderColor: '#FFFFF0',
+    justifyContent: 'flex-end'
   },
   header: {
     marginTop: 200,
