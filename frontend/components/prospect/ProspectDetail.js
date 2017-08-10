@@ -23,7 +23,7 @@ export default class ProspectDetails extends Component {
   }
 
   onSwipe(gestureName, gestureState) {
-   const {SWIPE_UP, SWIPE_DOWN, SWIPE_LEFT, SWIPE_RIGHT} = swipeDirections;
+   const {SWIPE_LEFT, SWIPE_RIGHT} = swipeDirections;
    this.setState({gestureName: gestureName});
    switch (gestureName) {
      case SWIPE_LEFT:
