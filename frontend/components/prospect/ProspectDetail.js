@@ -62,7 +62,7 @@ export default class ProspectDetails extends Component {
             <TouchableOpacity >
               <Image
                 style={styles.icon}
-                source={require('../../../assets/images/setting.png')} />
+                source={require('../../../assets/images/settings.png')} />
             </TouchableOpacity>
           </View>
           <Text style={styles.navbarText}>
