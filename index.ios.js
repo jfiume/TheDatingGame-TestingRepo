@@ -1,4 +1,4 @@
 import { AppRegistry } from 'react-native';
 import App from './frontend/app';
 
-AppRegistry.registerComponent('thedatinggame', () => App);
+AppRegistry.registerComponent('theDatingGame', () => App);

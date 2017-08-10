@@ -6,11 +6,11 @@ import {
   facebookLogin,
   facebookMiddleware,
   oauthCallback,
-} from './controllers/auth';
+} from './controllers/auth_controller';
 
 // Connect to MongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/thedatinggame');
+mongoose.connect('mongodb://localhost/theDatingGame');
 
 // Initialize http server
 const app = express();
