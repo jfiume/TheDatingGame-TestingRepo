@@ -1,4 +1,6 @@
-//Bolier plate for MatchIndex
+// Bolier plate for MatchIndex
+// This component will need to fetchAllMatches(currentUserId)
+// Local state will update onPress, toggling between ChatIndex and GameIndex
 
 import React, { Component } from 'react';
 import {
