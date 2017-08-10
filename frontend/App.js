@@ -1,18 +1,30 @@
-import React from 'react';
-import { View } from 'react-native';
+import React, { Component } from 'react';
+import { View, Text } from 'react-native';
+import Login from './components/login.js';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
-import SignUp from './components/intro/SignUp';
 
-const App = () => {
-  return (
-    <Provider store={createStore(reducers)}>
-      <View style={{flex: 1}}>
-        <SignUp />
-      </View>
-    </Provider>
-  );
-};
+export default class App extends Component {
+  state = {
+    user: undefined, // not logged in yet
+  };
 
-export default App;
+// Gets called after user logs in with Facebook or Google
+  onLoggedIn = (user) => {
+    this.setState({ user });
+  };
+
+  render() {
+    const { user } = this.state;
+    return ( user ?
+      <Provider store={createStore(reducers)}>
+        <View style={{flex: 1}}>
+          <Text> welcome {user.name}</Text>
+         </View>
+       </Provider>
+
+      : <Login onLoggedIn={this.onLoggedIn} />
+    );
+  };
+}
