@@ -35,27 +35,33 @@ export default class ProspectDetails extends Component {
             </TouchableOpacity>
           </View>
         </View>
+        <View style={styles.imageContainer}>
 
-        <View style={styles.header}>
-          <Text style={styles.headerText}>
-            theDatingGame,
-          </Text>
-          <Text style={styles.secondHeaderText}>
-            lets have fun!
-          </Text>
-        </View>
-
-        <View style={styles.instructions}>
-          <View style={styles.instructionsline}>
-            <View style={styles.instructionsNumberContainer}>
-              <Text style={styles.instructionsNumber}>
-                1
+          <ImageBackground
+            source={require("../../../assets/images/girl.jpg")}
+            style={styles.image}>
+            <View style={styles.header}>
+              <Text style={styles.headerText}>
+                theDatingGame,
+              </Text>
+              <Text style={styles.secondHeaderText}>
+                lets have fun!
               </Text>
             </View>
-            <Text style={styles.instructionsText}>
-              Two people like each other & its a match...
-            </Text>
-          </View>
+
+            <View style={styles.instructions}>
+              <View style={styles.instructionsline}>
+                <View style={styles.instructionsNumberContainer}>
+                  <Text style={styles.instructionsNumber}>
+                    1
+                  </Text>
+                </View>
+                <Text style={styles.instructionsText}>
+                  Two people like each other & its a match...
+                </Text>
+              </View>
+            </View>
+          </ImageBackground>
         </View>
       </View>
     );
@@ -99,6 +105,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'rgb(252, 192, 27)',
     fontFamily: 'AvenirNext-Medium',
+  },
+  imageContainer: {
+    flex: 1,
+    borderRadius: 15,
+                            // borderTopRightRadius: 10,
+                            overflow: 'hidden',
+                            // height: 205,
+  },
+  image: {
+    flex: 1,
+    // borderRadius: 5,
+    // borderWidth: 5,
+    // borderColor: '#FFFFF0',
   },
   header: {
     marginTop: 200,
