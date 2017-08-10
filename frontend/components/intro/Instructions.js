@@ -19,7 +19,7 @@ export default class Instructions extends Component {
   render() {
     return (
       <ImageBackground
-        source={require("../../assets/images/splash5.jpg")}
+        source={require("../../../assets/images/splash5.jpg")}
         style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>

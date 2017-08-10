@@ -4,9 +4,9 @@ import {
   StyleSheet,
   Platform,
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native';
-import Icon from 'react-native-vector-icons/FontAwesome';
 import SafariView from 'react-native-safari-view';
 
 export default class Login extends Component {
@@ -67,7 +67,7 @@ export default class Login extends Component {
             Welcome Stranger!
           </Text>
           <View style={styles.avatar}>
-            <Icon name="user-circle" size={100} color="rgba(0,0,0,.09)" />
+            <TouchableOpacity name="user-circle" size={100} color="rgba(0,0,0,.09)" />
           </View>
           <Text style={styles.text}>
             Please log in to continue {'\n'}
@@ -76,14 +76,14 @@ export default class Login extends Component {
         </View>
 
         <View style={styles.buttons}>
-          <Icon.Button
+          <TouchableOpacity.Button
             name="facebook"
             backgroundColor="#3b5998"
             onPress={this.loginWithFacebook}
             {...iconStyles}
           >
             Login with Facebook
-          </Icon.Button>
+          </TouchableOpacity.Button>
         </View>
 
       </View>

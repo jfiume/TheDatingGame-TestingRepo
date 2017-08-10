@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import {
   AppRegistry,
   StyleSheet,
@@ -6,31 +6,63 @@ import {
   View,
   TouchableOpacity,
   Linking,
-  ImageBackground
+  ImageBackground,
+  Platform
 } from 'react-native';
+import SafariView from 'react-native-safari-view';
+
 
 export default class SignUp extends Component {
-  _handleURL(event) {
-    console.log(event.url);
-    // Bit of a hack to get the token from this URL...
-    // implement yours in a safer way
-    console.log(event.url.split('#')[1].split('=')[1].split('&')[0]);
-  }
-  _facebookLogin() { // CHRIS gonna make changes to GET user info request
-    Linking.openURL([
-      'https://graph.facebook.com/oauth/authorize',
-      '?response_type=token',
-      '&client_id='+'281198615620596',
-      '&redirect_uri=fb281198615620596://authorize',
-      '$scope=email' // Specify permissions
-    ].join(''));
-  }
+
+  static propTypes = {
+    onLoggedIn: PropTypes.func.isRequired
+  };
+
+  // Set up Linking
   componentDidMount() {
-    Linking.addEventListener('url', this._handleURL);
-  }
+    // Add event listener to handle OAuthLogin:// URLs
+    Linking.addEventListener('url', this.handleOpenURL);
+    // Launched from an external URL
+    Linking.getInitialURL().then((url) => {
+      if (url) {
+        this.handleOpenURL({ url });
+      }
+    });
+  };
+
+  componentWillUnmount() {
+    // Remove event listener
+    Linking.removeEventListener('url', this.handleOpenURL);
+  };
+
+  handleOpenURL = ({ url }) => {
+    // Extract stringified user string out of the URL
+    const [, user_string] = url.match(/user=([^#]+)/);
+    // Decode the user string and parse it into JSON
+    const user = JSON.parse(decodeURI(user_string));
+    // Call onLoggedIn function of parent component and pass user object
+    this.props.onLoggedIn(user);
+    if (Platform.OS === 'ios') {
+      SafariView.dismiss();
+    }
+  };
+
+  // Handle Login with Facebook button tap
+  loginWithFacebook = () => this.openURL('http://localhost:3000/auth/facebook');
+
+  // Open URL in a browser
+  openURL = (url) => {
+    // Use SafariView on iOS
+    if (Platform.OS === 'ios') {
+      SafariView.show({
+        url: url,
+        fromBottom: true,
+      });
+    }
+  };
   render() {
     return (
-      <ImageBackground
+      <ImageBackground style={styles.container}
         source={require("../../../assets/images/splash2.jpg")}
         style={styles.container}>
         <View style={styles.header}>
@@ -40,7 +72,7 @@ export default class SignUp extends Component {
         </View>
         <View>
           <View style={styles.signin}>
-            <TouchableOpacity onPress={this._facebookLogin}>
+            <TouchableOpacity onPress={this.loginWithFacebook}>
               <Text style={styles.signinText}>
                 Sign in with Facebook
               </Text>

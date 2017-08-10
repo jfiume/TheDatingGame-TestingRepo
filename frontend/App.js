@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
-import Login from './components/login.js';
+import SignUp from './components/intro/SignUp';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
@@ -24,7 +24,7 @@ export default class App extends Component {
          </View>
        </Provider>
 
-      : <Login onLoggedIn={this.onLoggedIn} />
+      : <SignUp onLoggedIn={this.onLoggedIn} />
     );
   };
 }
