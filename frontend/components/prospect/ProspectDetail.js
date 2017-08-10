@@ -6,7 +6,8 @@ import {
   View,
   TouchableOpacity,
   Linking,
-  Image
+  Image,
+  ImageBackground
 } from 'react-native';
 
 export default class ProspectDetails extends Component {
@@ -91,7 +92,7 @@ const styles = StyleSheet.create({
   icon: {
     height:25,
     width:25,
-    tintColor: 'grey'
+    tintColor: '#7e7e7e'
   },
   navbarText: {
     fontSize: 27,
