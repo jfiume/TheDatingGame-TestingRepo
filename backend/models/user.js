@@ -11,7 +11,11 @@ export const userSchema = new Schema({
   avatar: String,
   email: String,
   gender: String,
-  age: Number,
+  age: {
+    type: Number,
+    min: 18,
+    max: 65,
+  },
   age_range_low: Number,
   age_range_high: Number,
   location: String,
