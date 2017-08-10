@@ -11,12 +11,13 @@ export default class App extends Component {
     this.state = {
       user: undefined // not logged in yet
     };
+    this.onLoggedIn = this.onLoggedIn.bind(this);
   }
 
   // Gets called after user logs in with Facebook or Google
-  onLoggedIn = (user) => {
+  onLoggedIn(user) {
     this.setState({ user });
-  };
+  }
 
   render() {
     const { user } = this.state;
@@ -29,5 +30,5 @@ export default class App extends Component {
 
       : <SignUp onLoggedIn={this.onLoggedIn} />
     );
-  };
+  }
 }
