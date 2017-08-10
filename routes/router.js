@@ -2,7 +2,9 @@ const passport = require('passport');
 
 const AuthenticationController = require('../controllers/auth_controller');
 const UserController = require('../controllers/user_controller');
+const { create } = require('../controllers/user_controller');
 const ChatController = require('../controllers/chats_controller');
+const { allChats, showChat, createChat } = require('../controllers/chats_controller');
 const passportService = require('./passport');
 
 let requireAuth = passport.authenticate('jwt', {session: false});
@@ -23,7 +25,7 @@ router.route('/test')
 
 
 router.route('/signup')
-  .post(UserController.create);
+  .post(create);
 
 // User Routes
 // -----------------------------------------------------------------------------
@@ -42,14 +44,12 @@ router.route('/index')
 // Chat Routes
 // -----------------------------------------------------------------------------
 router.route('/chats')
-  .post(ChatController.index);
+  .get(allChats);
 
 router.route('/chat')
-  .post(ChatController.create);
-  // .get(ChatController.show);
+  .post(createChat);
 
 router.route('/chats/:id')
-  .delete(ChatController.destroy);
-  // .get(ChatController.destroy);
+  .get(showChat);
 
 module.exports = router;

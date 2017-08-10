@@ -3,24 +3,36 @@ const Messages = require('../models/messages');
 const TextGames = require('../models/text_games');
 const Chat = require('../models/chats');
 
-exports.create = function(req, res, next) {
+exports.createChat = function(req, res, next) {
+  console.log("i am running");
+  console.log(req.body);
   let chat = new Chat({
-    messages: Messages,
-    user_ids: User.id,
-    played_games: TextGames
+    messages: req.body.messages,
+    user_ids: req.body.userId,
+    played_games: req.body.textGames
   });
   chat.save(function(err) {
     if (err) { return next(err); }
-    res.json(chat.messages);
+  }).then(() => Chat.findOne(chat));
+};
+
+exports.allChats = function(req, res, next) {
+  console.log("i am running");
+  Chat.find({}, function(err, chats) {
+    res.json(chats.reduce(function(chatMap, item) {
+            chatMap[item.id] = item;
+            return chatMap;
+        }, {}));
   });
 };
 
-exports.index = function(req, res, next) {
-  res.json(req.chat);
-};
-
-exports.show = function(req, res, next) {
-  res.json(req.chat.id);
+exports.showChat = function(req, res, next) {
+  console.log("i am running");
+  let {id} = req.params;
+  console.log(id);
+  Chat.findOne({_id: id}, function(err, chat) {
+    console.log(chat);
+  });
 };
 
 exports.destroy = function(req, res, next) {

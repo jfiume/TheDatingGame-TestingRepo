@@ -20,15 +20,18 @@ exports.index = function(req, res, next) {
 
 exports.create = function(req, res, next) {
   console.log("i am running");
+  console.log(req.body);
   let user = new User({
-    facebook_id: req.query.facebook_id,
-    email: req.query.email,
-    name: req.query.name
+    facebook_id: req.body.facebook_id,
+    email: req.body.email,
+    name: req.body.name
   });
+  console.log(user);
   user.save(function(err) {
     if (err) { return next(err); }
-    res.json({user_id: user._id});
-  });
+    // res.send({user_id: user._id});
+  }).then(() => User.findOne({user}));
+  // user.save().then(() => User.findOne({ema}))
 };
 
 exports.test = function (req, res, next){
