@@ -8,9 +8,6 @@ import {
   TouchableOpacity,
   Linking
 } from 'react-native';
-import SignUp from './frontend/components/signUp';
-import Instructions from './frontend/components/instructions';
-import ProspectDetail from './frontend/components/prospect/ProspectDetail';
 
 
 export default class theDatingGame extends Component {
@@ -23,29 +20,33 @@ export default class theDatingGame extends Component {
       '&redirect_uri=fb281198615620596://authorize'
     ].join(''));
   }
-  // componentDidMount() {
-  //   Linking.addEventListener('url', (event) => {
-  //     // This is all the login logic that takes place after the user is redirected
-  //     // back to the app from the third party site.
-  //     var facebookToken = event.url.split('#')[1].split('=')[1].split('&')[0];
-  //     axios.post('http://localhost:3000/v1/facebook_auth', {token: facebookToken}).then((response) => {
-  //       var token = response.data.token;
-  //       // Save this token and use it for future protected API calls like this:
-  //
-  //       axios.get('http://localhost:3000/v1/protected', {headers: {authorization: token}}).then((res) => {
-  //         // console.log("Successfully made authenticated API call!!");
-  //       }).catch((err) => {
-  //         // console.log(err);
-  //       });
-  //     }).catch((err) => {
-  //       // console.log(err);
-  //     });
-  //   });
-  // }
+  componentDidMount() {
+    Linking.addEventListener('url', (event) => {
+      // This is all the login logic that takes place after the user is redirected
+      // back to the app from the third party site.
+      var facebookToken = event.url.split('#')[1].split('=')[1].split('&')[0];
+      axios.post('http://localhost:3000/v1/facebook_auth', {token: facebookToken}).then((response) => {
+        var token = response.data.token;
+        // Save this token and use it for future protected API calls like this:
+
+        axios.get('http://localhost:3000/v1/protected', {headers: {authorization: token}}).then((res) => {
+          // console.log("Successfully made authenticated API call!!");
+        }).catch((err) => {
+          // console.log(err);
+        });
+      }).catch((err) => {
+        // console.log(err);
+      });
+    });
+  }
   render() {
     return (
       <View style={styles.container}>
-        <ProspectDetail />
+        <TouchableOpacity onPress={this._facebookLogin}>
+          <Text style={styles.welcome}>
+            Facebook Login!
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
