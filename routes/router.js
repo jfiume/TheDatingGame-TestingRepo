@@ -3,7 +3,7 @@ const AuthenticationController = require('../controllers/auth_controller');
 const UserController = require('../controllers/user_controller');
 const { create } = require('../controllers/user_controller');
 const ChatController = require('../controllers/chats_controller');
-const { allChats, showChat, createChat, destroyChat } = require('../controllers/chats_controller');
+const { allChats, showChat, createChat, destroyChat, socketChat } = require('../controllers/chats_controller');
 const passportService = require('./passport');
 
 
@@ -52,5 +52,8 @@ router.route('/chat')
 router.route('/chats/:id')
   .get(showChat)
   .delete(destroyChat);
+
+router.route('/')
+  .get(socketChat);
 
 module.exports = router;

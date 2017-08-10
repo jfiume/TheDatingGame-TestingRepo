@@ -32,3 +32,7 @@ exports.destroyChat = function(req, res, next) {
   let {id} = req.params;
   Chat.findByIdAndRemove({_id: id}).then(res.send("deleted"));
 };
+
+exports.socketChat = function(req, res, next) {
+  res.sendFile(__dirname.replace('controllers', '') + '/socket_chat.html');
+};

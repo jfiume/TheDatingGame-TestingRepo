@@ -6,9 +6,9 @@ const Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost/TheDatingGame');
 
 const messagesSchema = new Schema({
-  Objectid: {
-    authorId: { type: Number },
-    messageOriginationTime: { type: Date },
-    messageContent: { type: String }
-  }
+  authorId: Number,
+  messageOriginationTime: Date,
+  messageContent: String
 });
+
+module.exports = mongoose.model('Messages', messagesSchema);
