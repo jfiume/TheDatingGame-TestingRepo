@@ -42,6 +42,18 @@
 		BD86882CFD854B23A7DE0C86 /* Aller_LtIt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9E06D9F9764041ECB40987D7 /* Aller_LtIt.ttf */; };
 		45AF23E50F7D4A69B0398471 /* Aller_Rg.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5DD0FF88D1E842B5B5F0B582 /* Aller_Rg.ttf */; };
 		AFF5A4D16C19489BA571778B /* AllerDisplay.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F2CA6C7AE34B4174959F51E4 /* AllerDisplay.ttf */; };
+		0F537B5F08E344609452A08D /* libSafariViewManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FB0A23BEA54A4376A4418F0F /* libSafariViewManager.a */; };
+		16560C2FB5AC439AAC32510B /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B9D6BDE67754A4192C6953F /* libRNVectorIcons.a */; };
+		69C25B35A0D147508E95463B /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89D0AE7B6C684BF3BA56A8CA /* Entypo.ttf */; };
+		B8B8BD518C9E4ECD8351CEE5 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D039750AE43475A9F95E9B7 /* EvilIcons.ttf */; };
+		62C12B3047E54454A0D37AC7 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CDF501AB84F2402E8A9AFEAF /* FontAwesome.ttf */; };
+		C7D2D57282BF4E049199A1F1 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 03CAD1C604C2464F9851EA99 /* Foundation.ttf */; };
+		87FACAFEC71F485C8B72E1EE /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 982FEA3E037346FABDC6D546 /* Ionicons.ttf */; };
+		F64D39AE981343B6AD1C82D1 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0001D9BF47E491A99B14D34 /* MaterialCommunityIcons.ttf */; };
+		15897BBA6820476CB99D1B1F /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F8BB3E60E70B48C0AEE19DAB /* MaterialIcons.ttf */; };
+		1676BE80AC1F47F7946CF40A /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D24EB1F9FC244E8692A2357E /* Octicons.ttf */; };
+		9E40D69DAC50419DB094C0F2 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4CBBF1C2A9D47D9B8BDEAE1 /* SimpleLineIcons.ttf */; };
+		CD882B2EC2F6492483D8B1FD /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EEC8EEC935774436A89B74A8 /* Zocial.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -268,6 +280,20 @@
 		9E06D9F9764041ECB40987D7 /* Aller_LtIt.ttf */ = {isa = PBXFileReference; name = "Aller_LtIt.ttf"; path = "../assets/fonts/Aller_LtIt.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		5DD0FF88D1E842B5B5F0B582 /* Aller_Rg.ttf */ = {isa = PBXFileReference; name = "Aller_Rg.ttf"; path = "../assets/fonts/Aller_Rg.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		F2CA6C7AE34B4174959F51E4 /* AllerDisplay.ttf */ = {isa = PBXFileReference; name = "AllerDisplay.ttf"; path = "../assets/fonts/AllerDisplay.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C841F74C5E5A425DA12B537F /* SafariViewManager.xcodeproj */ = {isa = PBXFileReference; name = "SafariViewManager.xcodeproj"; path = "../node_modules/react-native-safari-view/SafariViewManager.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		FB0A23BEA54A4376A4418F0F /* libSafariViewManager.a */ = {isa = PBXFileReference; name = "libSafariViewManager.a"; path = "libSafariViewManager.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		403F999C1FB84732B1632FD6 /* RNVectorIcons.xcodeproj */ = {isa = PBXFileReference; name = "RNVectorIcons.xcodeproj"; path = "../node_modules/react-native-vector-icons/RNVectorIcons.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		7B9D6BDE67754A4192C6953F /* libRNVectorIcons.a */ = {isa = PBXFileReference; name = "libRNVectorIcons.a"; path = "libRNVectorIcons.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		89D0AE7B6C684BF3BA56A8CA /* Entypo.ttf */ = {isa = PBXFileReference; name = "Entypo.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3D039750AE43475A9F95E9B7 /* EvilIcons.ttf */ = {isa = PBXFileReference; name = "EvilIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CDF501AB84F2402E8A9AFEAF /* FontAwesome.ttf */ = {isa = PBXFileReference; name = "FontAwesome.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		03CAD1C604C2464F9851EA99 /* Foundation.ttf */ = {isa = PBXFileReference; name = "Foundation.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		982FEA3E037346FABDC6D546 /* Ionicons.ttf */ = {isa = PBXFileReference; name = "Ionicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0001D9BF47E491A99B14D34 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; name = "MaterialCommunityIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F8BB3E60E70B48C0AEE19DAB /* MaterialIcons.ttf */ = {isa = PBXFileReference; name = "MaterialIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D24EB1F9FC244E8692A2357E /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C4CBBF1C2A9D47D9B8BDEAE1 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		EEC8EEC935774436A89B74A8 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -294,6 +320,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				0F537B5F08E344609452A08D /* libSafariViewManager.a in Frameworks */,
+				16560C2FB5AC439AAC32510B /* libRNVectorIcons.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +488,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				C841F74C5E5A425DA12B537F /* SafariViewManager.xcodeproj */,
+				403F999C1FB84732B1632FD6 /* RNVectorIcons.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -507,6 +537,16 @@
 				9E06D9F9764041ECB40987D7 /* Aller_LtIt.ttf */,
 				5DD0FF88D1E842B5B5F0B582 /* Aller_Rg.ttf */,
 				F2CA6C7AE34B4174959F51E4 /* AllerDisplay.ttf */,
+				89D0AE7B6C684BF3BA56A8CA /* Entypo.ttf */,
+				3D039750AE43475A9F95E9B7 /* EvilIcons.ttf */,
+				CDF501AB84F2402E8A9AFEAF /* FontAwesome.ttf */,
+				03CAD1C604C2464F9851EA99 /* Foundation.ttf */,
+				982FEA3E037346FABDC6D546 /* Ionicons.ttf */,
+				D0001D9BF47E491A99B14D34 /* MaterialCommunityIcons.ttf */,
+				F8BB3E60E70B48C0AEE19DAB /* MaterialIcons.ttf */,
+				D24EB1F9FC244E8692A2357E /* Octicons.ttf */,
+				C4CBBF1C2A9D47D9B8BDEAE1 /* SimpleLineIcons.ttf */,
+				EEC8EEC935774436A89B74A8 /* Zocial.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -877,6 +917,16 @@
 				BD86882CFD854B23A7DE0C86 /* Aller_LtIt.ttf in Resources */,
 				45AF23E50F7D4A69B0398471 /* Aller_Rg.ttf in Resources */,
 				AFF5A4D16C19489BA571778B /* AllerDisplay.ttf in Resources */,
+				69C25B35A0D147508E95463B /* Entypo.ttf in Resources */,
+				B8B8BD518C9E4ECD8351CEE5 /* EvilIcons.ttf in Resources */,
+				62C12B3047E54454A0D37AC7 /* FontAwesome.ttf in Resources */,
+				C7D2D57282BF4E049199A1F1 /* Foundation.ttf in Resources */,
+				87FACAFEC71F485C8B72E1EE /* Ionicons.ttf in Resources */,
+				F64D39AE981343B6AD1C82D1 /* MaterialCommunityIcons.ttf in Resources */,
+				15897BBA6820476CB99D1B1F /* MaterialIcons.ttf in Resources */,
+				1676BE80AC1F47F7946CF40A /* Octicons.ttf in Resources */,
+				9E40D69DAC50419DB094C0F2 /* SimpleLineIcons.ttf in Resources */,
+				CD882B2EC2F6492483D8B1FD /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,6 +1058,16 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/theDatingGame.app/theDatingGame";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 			};
 			name = Debug;
 		};
@@ -1025,6 +1085,16 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/theDatingGame.app/theDatingGame";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 			};
 			name = Release;
 		};
@@ -1043,6 +1113,11 @@
 				);
 				PRODUCT_NAME = theDatingGame;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 			};
 			name = Debug;
 		};
@@ -1060,6 +1135,11 @@
 				);
 				PRODUCT_NAME = theDatingGame;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 			};
 			name = Release;
 		};
@@ -1086,6 +1166,16 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 			};
 			name = Debug;
 		};
@@ -1112,6 +1202,16 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-safari-view",
+					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
+				);
 			};
 			name = Release;
 		};
@@ -1133,6 +1233,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/theDatingGame-tvOS.app/theDatingGame-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1154,6 +1259,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/theDatingGame-tvOS.app/theDatingGame-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 			};
 			name = Release;
 		};
