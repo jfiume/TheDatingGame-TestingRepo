@@ -5,15 +5,17 @@ const Chat = require('../models/chats');
 
 exports.createChat = function(req, res, next) {
   console.log("i am running");
-  console.log(req.body);
+  console.log(req.body.messages);
   let chat = new Chat({
-    messages: req.body.messages,
-    user_ids: req.body.userId,
-    played_games: req.body.textGames
+    "messages": "do i work?"
+    // messages: req.body.messages,
+    // user_ids: req.body.userId,
+    // played_games: req.body.textGames
   });
+  console.log(chat);
   chat.save(function(err) {
     if (err) { return next(err); }
-  }).then(() => Chat.findOne(chat));
+  });
 };
 
 exports.allChats = function(req, res, next) {
@@ -37,9 +39,9 @@ exports.showChat = function(req, res, next) {
 
 exports.destroy = function(req, res, next) {
   const user = req.user;
-  const chatId = req.params.chatId;
-  user.chats = user.chats.filter((chat) => {
-    if (chatId === chat.id) {
+  let {id} = req.params;
+  user.id = user.chats.filter((chat) => {
+    if (id === chat.id) {
       return false;
     }
     return true;

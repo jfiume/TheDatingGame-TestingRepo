@@ -8,21 +8,21 @@ const UserController = require('./controllers/user_controller');
 const app = express();
 const router = require('./routes/router');
 
-mongoose.connect('mongodb://localhost:testOauth/testOauth');
+mongoose.connect('mongodb://localhost:3000/TheDatingGame');
 
 
 const protectedAction = function(req, res) {
   res.send("Here's some protected information!");
 };
 
-router.route('/facebook_auth')
-  .post(AuthController.facebookAuth);
-router.route('/protected')
-  .get([AuthController.requireAuth, protectedAction]);
-router.route('/test')
-  .get(UserController.test);
-router.route('/signup')
-  .post(UserController.create);
+// router.route('/facebook_auth')
+//   .post(AuthController.facebookAuth);
+// router.route('/protected')
+//   .get([AuthController.requireAuth, protectedAction]);
+// router.route('/test')
+//   .get(UserController.test);
+// router.route('/signup')
+//   .post(UserController.create);
 
 app.use(morgan('combined'));
 app.use(bodyParser.json({type:'*/*'}));

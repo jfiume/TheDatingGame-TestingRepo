@@ -5,10 +5,10 @@ const Schema = mongoose.Schema;
 
 const chatsSchema = new Schema({
   ObjectId: {
-    messages: { type: Array },
-    user_ids: { type: Array },
-    played_games: { type: Array }
+    messages: String,
+    // user_ids: Array,
+    // played_games: Array
   }
 });
 
-module.exports = mongoose.model('chat', chatsSchema);
+module.exports = mongoose.model('Chat', chatsSchema);
