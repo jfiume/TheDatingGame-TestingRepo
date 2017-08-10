@@ -30,8 +30,8 @@ export default class SignUp extends Component {
   }
   render() {
     return (
-      <ImageBackground
-        source={require("../../assets/images/splash2.jpg")}
+      <ImageBackground style={styles.container}
+        source={require("../../../assets/images/splash2.jpg")}
         style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerText}>
@@ -63,7 +63,10 @@ const styles = StyleSheet.create({
     // remove width and height to override fixed static size
     width: undefined,
     height: undefined,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    // borderRadius: 4,
+    // borderWidth: 0.5,
+    // borderColor: 'blue',
   },
   header: {
     marginTop: 70,
@@ -74,7 +77,9 @@ const styles = StyleSheet.create({
     fontSize: 35,
     textAlign: 'center',
     color: 'white',
-    fontFamily: 'AvenirNext-Medium'
+    fontFamily: 'AvenirNext-Medium',
+    // fontWeight: 'bold',
+    // fontStyle: 'italic'
   },
   signin: {
     alignSelf: 'center',
@@ -93,7 +98,7 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 20,
     fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium'
+    fontFamily: 'AvenirNext-Medium',
   },
   footer: {
     marginTop: 65,
@@ -106,6 +111,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium'
+    fontFamily: 'AvenirNext-Medium',
   }
 });
