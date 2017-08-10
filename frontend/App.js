@@ -6,11 +6,14 @@ import { createStore } from 'redux';
 import reducers from './reducers';
 
 export default class App extends Component {
-  state = {
-    user: undefined, // not logged in yet
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: undefined // not logged in yet
+    };
+  }
 
-// Gets called after user logs in with Facebook or Google
+  // Gets called after user logs in with Facebook or Google
   onLoggedIn = (user) => {
     this.setState({ user });
   };
