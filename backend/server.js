@@ -10,7 +10,7 @@ import {
 
 // Connect to MongoDB
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/oauthsix');
+mongoose.connect('mongodb://localhost/thedatinggame');
 
 // Initialize http server
 const app = express();
