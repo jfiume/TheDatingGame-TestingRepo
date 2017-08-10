@@ -1,27 +1,19 @@
-const mongoose = require('mongoose');
-// const uuid = require('uuid');
+import mongoose, { Schema } from 'mongoose';
 
-const Schema = mongoose.Schema;
-
-// mongoose.connect('mongodb://localhost/TheDatingGame');
-
-
-const userSchema = new mongoose.Schema({
-  email: {
+// Define model schema
+export const userSchema = new Schema({
+  oauth_id: {
     type: String,
     unique: true,
-    lowercase: true,
-    required: true
+    index: true,
   },
-  facebook_id: {
-    type: String,
-    unique: true,
-    required: true
-  },
-  name: {
-    type: String,
-    required: true
-  },
+  name: String,
+  avatar: String,
+  email: String,
+  gender: String,
+  birthday: String,
+  location: String
 });
 
-module.exports = mongoose.model('user', userSchema);
+// Export Mongoose model
+export default mongoose.model('User', userSchema);
