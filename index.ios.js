@@ -9,6 +9,8 @@ import {
   Linking
 } from 'react-native';
 
+import App from './frontend/App';
+
 
 export default class theDatingGame extends Component {
   _facebookLogin() {
@@ -42,11 +44,7 @@ export default class theDatingGame extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={this._facebookLogin}>
-          <Text style={styles.welcome}>
-            Facebook Login!
-          </Text>
-        </TouchableOpacity>
+        <App />
       </View>
     );
   }
