@@ -44,7 +44,11 @@ export default class theDatingGame extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <App />
+        <TouchableOpacity onPress={this._facebookLogin}>
+         <Text style={styles.welcome}>
+             Facebook Login!
+          </Text>
+        </TouchableOpacity>
       </View>
     );
   }
