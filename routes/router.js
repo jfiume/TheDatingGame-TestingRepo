@@ -1,11 +1,11 @@
 const passport = require('passport');
-
 const AuthenticationController = require('../controllers/auth_controller');
 const UserController = require('../controllers/user_controller');
 const { create } = require('../controllers/user_controller');
 const ChatController = require('../controllers/chats_controller');
-const { allChats, showChat, createChat } = require('../controllers/chats_controller');
+const { allChats, showChat, createChat, destroyChat } = require('../controllers/chats_controller');
 const passportService = require('./passport');
+
 
 let requireAuth = passport.authenticate('jwt', {session: false});
 let requireLogin = passport.authenticate('local', {session: false});
@@ -50,6 +50,7 @@ router.route('/chat')
   .post(createChat);
 
 router.route('/chats/:id')
-  .get(showChat);
+  .get(showChat)
+  .delete(destroyChat);
 
 module.exports = router;

@@ -4,9 +4,18 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const AuthController = require('./controllers/auth_controller');
 const UserController = require('./controllers/user_controller');
+// const jsonParser = bodyParser.json();
+// create application/x-www-form-urlencoded parser
+// const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 const app = express();
+// app.use(bodyParser.json({type:'*/*'}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(require('connect').bodyParser());
+
 const router = require('./routes/router');
+
 
 mongoose.connect('mongodb://localhost:3000/TheDatingGame');
 
@@ -25,10 +34,11 @@ const protectedAction = function(req, res) {
 //   .post(UserController.create);
 
 app.use(morgan('combined'));
-app.use(bodyParser.json({type:'*/*'}));
 app.use('/v1', router);
 
 app.listen(3000, '127.0.0.1', function(err) {
   if (err) { return console.log(err); }
   console.log("Listening on port 3000.");
 });
+
+module.exports = app;
