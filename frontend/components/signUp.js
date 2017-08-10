@@ -63,10 +63,7 @@ const styles = StyleSheet.create({
     // remove width and height to override fixed static size
     width: undefined,
     height: undefined,
-    justifyContent: 'space-between',
-    // borderRadius: 4,
-    // borderWidth: 0.5,
-    // borderColor: 'blue',
+    justifyContent: 'space-between'
   },
   header: {
     marginTop: 70,
@@ -77,9 +74,7 @@ const styles = StyleSheet.create({
     fontSize: 35,
     textAlign: 'center',
     color: 'white',
-    fontFamily: 'AvenirNext-Medium',
-    // fontWeight: 'bold',
-    // fontStyle: 'italic'
+    fontFamily: 'AvenirNext-Medium'
   },
   signin: {
     alignSelf: 'center',
@@ -98,7 +93,7 @@ const styles = StyleSheet.create({
     paddingRight: 20,
     paddingLeft: 20,
     fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium',
+    fontFamily: 'AvenirNext-Medium'
   },
   footer: {
     marginTop: 65,
@@ -111,6 +106,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'white',
     fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium',
+    fontFamily: 'AvenirNext-Medium'
   }
 });
