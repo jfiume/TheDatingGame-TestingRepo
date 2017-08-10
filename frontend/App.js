@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { View, Text } from 'react-native';
 import Login from './components/login.js';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from './reducers';
 
 export default class App extends Component {
   state = {
@@ -14,13 +17,14 @@ export default class App extends Component {
 
   render() {
     const { user } = this.state;
-    return user ?
-
-          <Text>
-            welcome {user.name}!
-          </Text>
+    return ( user ?
+      <Provider store={createStore(reducers)}>
+        <View style={{flex: 1}}>
+          <Text> welcome {user.name}</Text>
+         </View>
+       </Provider>
 
       : <Login onLoggedIn={this.onLoggedIn} />
-
+    );
   };
 }
