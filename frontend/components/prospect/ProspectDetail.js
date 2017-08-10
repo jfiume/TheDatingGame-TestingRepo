@@ -23,7 +23,9 @@ export default class ProspectDetails extends Component {
         <View style={styles.navbar}>
           <View style={styles.navbar_icons}>
             <TouchableOpacity >
-              <Image style={styles.icon} source={require('../../../assets/images/setting.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../../../assets/images/setting.png')} />
             </TouchableOpacity>
           </View>
           <Text style={styles.navbarText}>
@@ -31,34 +33,40 @@ export default class ProspectDetails extends Component {
           </Text>
           <View style={styles.navbar_icons}>
             <TouchableOpacity >
-              <Image style={styles.icon} source={require('../../../assets/images/matches.png')} />
+              <Image
+                style={styles.icon}
+                source={require('../../../assets/images/matches.png')} />
             </TouchableOpacity>
           </View>
         </View>
         <View style={styles.imageContainer}>
-
           <ImageBackground
             source={require("../../../assets/images/girl.jpg")}
             style={styles.image}>
-            <View style={styles.header}>
-              <Text style={styles.headerText}>
-                theDatingGame,
-              </Text>
-              <Text style={styles.secondHeaderText}>
-                lets have fun!
-              </Text>
-            </View>
+            <View style={styles.imageText}>
+              <View style={styles.firstLine}>
+                <Text style={styles.name}>
+                  Grace,
+                </Text>
+                <Text style={styles.age}>
+                  24
+                </Text>
+              </View>
 
-            <View style={styles.instructions}>
-              <View style={styles.instructionsline}>
-                <View style={styles.instructionsNumberContainer}>
-                  <Text style={styles.instructionsNumber}>
-                    1
+              <View style={styles.secondLine}>
+                <View style={styles.secondLineContainer}>
+                    <Text style={styles.occupation}>
+                      Teacher
+                    </Text>
+                  </View>
+                <View style={styles.theRest}>
+                  <Text style={styles.instructionsText}>
+                    Two people like each other & its a match...
+                  </Text>
+                  <Text style={styles.instructionsText}>
+                    Two people like each other & its a match...
                   </Text>
                 </View>
-                <Text style={styles.instructionsText}>
-                  Two people like each other & its a match...
-                </Text>
               </View>
             </View>
           </ImageBackground>
@@ -80,12 +88,9 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginTop:15,
     alignItems: 'center'
-    // width: undefined
   },
 
   navbar_icons: {
-    // height: 5,
-    // width: 5,
     margin: 2
   },
 
@@ -108,7 +113,15 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    justifyContent: 'flex-end'
+    justifyContent: 'flex-end',
+    padding:15
+  },
+  imageText: {
+    backgroundColor: 'white',
+    borderRadius: 15,
+    borderWidth:5,
+    borderColor: 'white',
+    padding: 5
   },
   header: {
     marginTop: 200,
@@ -131,7 +144,7 @@ const styles = StyleSheet.create({
   instructionsText: {
     fontSize: 16,
     // textAlign: 'center',
-    color: 'white',
+    color: '#292929',
     flexWrap: 'wrap',
     width: 300,
     // fontWeight: 'bold',
