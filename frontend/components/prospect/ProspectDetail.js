@@ -60,11 +60,11 @@ export default class ProspectDetails extends Component {
                     </Text>
                   </View>
                 <View style={styles.theRest}>
-                  <Text style={styles.instructionsText}>
-                    Two people like each other & its a match...
+                  <Text style={styles.school}>
+                    Middleburry College,
                   </Text>
-                  <Text style={styles.instructionsText}>
-                    Two people like each other & its a match...
+                  <Text style={styles.graduationDate}>
+                    2015
                   </Text>
                 </View>
               </View>
@@ -100,7 +100,7 @@ const styles = StyleSheet.create({
     tintColor: '#7e7e7e'
   },
   navbarText: {
-    fontSize: 27,
+    fontSize: 29,
     textAlign: 'center',
     color: 'rgb(252, 192, 27)',
     fontFamily: 'AvenirNext-Medium',
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     flex: 1,
     borderRadius: 15,
     overflow: 'hidden',
-    marginTop:10
+    marginTop: 7
   },
   image: {
     flex: 1,
@@ -121,109 +121,42 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     borderWidth:5,
     borderColor: 'white',
-    padding: 5
+    padding: 5,
   },
-  header: {
-    marginTop: 200,
-    alignItems: 'center',
-    backgroundColor: 'transparent',
+  firstLine: {
+    flexDirection: 'row',
+    alignItems: 'center'
   },
-  secondHeaderText: {
-    fontSize: 35,
-    textAlign: 'center',
-    color: 'white',
-    fontFamily: 'GillSans-Italic',
+  name: {
+    fontSize: 25,
+    color: '#363636',
+    fontFamily: 'AvenirNext-Medium',
     fontWeight: 'bold'
   },
-
-  instructions: {
-    alignSelf: 'center',
-    backgroundColor: 'transparent',
-    marginTop: -70
+  age: {
+    marginLeft: 7,
+    fontSize: 25,
+    color: '#363636',
+    fontFamily: 'AvenirNext-Regular'
   },
-  instructionsText: {
-    fontSize: 16,
-    // textAlign: 'center',
-    color: '#292929',
-    flexWrap: 'wrap',
-    width: 300,
-    // fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium',
-  },
-  instructionsline: {
+  theRest: {
     flexDirection: 'row',
-    // alignItems: 'center',
-    paddingTop: 5,
-    paddingBottom: 15,
-    paddingRight: 10,
-    paddingLeft: 15,
-    marginLeft:10
+    alignItems: 'center'
   },
-  instructionsNumberContainer: {
-    borderRadius: 7,
-    borderWidth: 1.5,
-    borderColor: '#FFFFF0',
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignContent: 'center',
-    marginRight: 15,
-    width: 23,
-    height: 23,
-
+  occupation: {
+    fontSize: 13,
+    color: '#363636',
+    fontFamily: 'AvenirNext-Regular'
   },
-  instructionsNumber: {
-    fontSize: 15,
-    textAlign: 'center',
-    color: '#f0f066',
-    // borderRadius: 7,
-    // borderWidth: 1.5,
-    // borderColor: 'white',
-    // fontWeight: 'bold',
-    fontFamily: 'AvenirNext-Medium',
-    // paddingTop: 10,
-    // paddingBottom: 3,
-    // paddingRight: 6,
-    // paddingLeft: 6,
-    // marginTop: 3,
-    // marginRight: 15,
-    // width: 23,
-    // height: 23,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignContent: 'center',
-    // alignSelf: 'center',
+  school: {
+    fontSize: 14,
+    color: '#363636',
+    fontFamily: 'AvenirNext-Medium'
   },
-  next: {
-    alignSelf: 'center',
-    borderRadius: 50,
-    borderWidth: 2,
-    borderColor: 'white',
-    backgroundColor: 'transparent',
-    marginBottom: 40,
-    alignItems: 'center',
-    justifyContent: 'center',
-    alignContent: 'center'
-  },
-  nextButton: {
-    fontSize: 35,
-    textAlign: 'center',
-    color: 'white',
-    justifyContent: 'center',
-    alignContent: 'center',
-    alignSelf: 'center',
-    alignItems: 'center',
-    // paddingTop: 5,
-    // paddingBottom: 30,
-    marginBottom:4,
-    // marginTop:4,
-    marginRight:2,
-    marginLeft:2,
-    // paddingRight: 10,
-    // paddingLeft: 10,
-    // fontWeight: 'bold',
-    width: 40,
-    height: 40,
-    borderRadius: 50,
-    fontFamily: 'AvenirNext-Medium',
+  graduationDate: {
+    marginLeft: 5,
+    fontSize: 14,
+    color: '#363636',
+    fontFamily: 'AvenirNext-Regular'
   }
 });
