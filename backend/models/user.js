@@ -11,8 +11,17 @@ export const userSchema = new Schema({
   avatar: String,
   email: String,
   gender: String,
-  birthday: String,
-  location: String
+  age: Number,
+  age_range_low: Number,
+  age_range_high: Number,
+  location: String,
+  occupation: String,
+  education: String,
+  about: String,
+  interested_in: String,
+  liked_users: Array,
+  disliked_users: Array,
+  matches: Array,
 });
 
 // Export Mongoose model
