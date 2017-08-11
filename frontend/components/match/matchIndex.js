@@ -6,8 +6,13 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
+  Linking,
+  Image,
+  ImageBackground
 } from 'react-native';
+import { Tabs, Tab, Icon } from 'react-native-elements';
 
 // import ChatIndex from '../chat/ChatIndex';
 // import GameIndex from '../game/GameIndex';
@@ -16,9 +21,15 @@ export default class MatchIndex extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>
-          Welcome to React Native!
-        </Text>
+        <View style={styles.navbar}>
+          <View style={styles.navbar_icons}>
+            <TouchableOpacity >
+              <Image
+                style={styles.icon}
+                source={require('../../../assets/images/back.png')} />
+            </TouchableOpacity>
+          </View>
+        </View>
       </View>
     );
   }
@@ -27,7 +38,23 @@ export default class MatchIndex extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'space-between',
+    padding: 10,
+  },
+  navbar: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop:15,
     alignItems: 'center'
+  },
+
+  navbar_icons: {
+    margin: 2
+  },
+
+  icon: {
+    height:25,
+    width:25,
+    tintColor: '#7e7e7e'
   },
 });
