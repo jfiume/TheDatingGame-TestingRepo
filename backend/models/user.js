@@ -11,9 +11,24 @@ export const userSchema = new Schema({
   avatar: String,
   email: String,
   gender: String,
-  birthday: String,
-  location: String
+  age: {
+    type: Number,
+    min: 18,
+    max: 65,
+  },
+  age_range_low: Number,
+  age_range_high: Number,
+  location: String,
+  occupation: String,
+  education: String,
+  about: String,
+  interested_in: String,
+  liked_users: Array,
+  disliked_users: Array,
+  matches: Array,
 });
 
 // Export Mongoose model
-export default mongoose.model('User', userSchema);
+const User = mongoose.model('user', userSchema);
+
+module.exports = User;
