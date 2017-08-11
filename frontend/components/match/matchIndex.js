@@ -12,7 +12,7 @@ import {
   Image,
   ImageBackground
 } from 'react-native';
-import { Tabs, Tab, Icon } from 'react-native-elements';
+
 
 // import ChatIndex from '../chat/ChatIndex';
 // import GameIndex from '../game/GameIndex';

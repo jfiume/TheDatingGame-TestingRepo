@@ -12,12 +12,25 @@ import {
 import ChatDetail from './components/chat/ChatDetail';
 
 export default class ChatIndex extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  renderChats () {
+      let { chats } = this.props;
+      chats = chats.filter( chat => chat.user_id === this.props.currentUserId);
+      return chats.map ( chat => (
+        <ChatDetail key={chat.id} chat={chat}/>
+      ));
+    }
+
   render() {
+    const user = this.props.currentUser.id || "";
     return (
       <View style={styles.container}>
-        <Text>
-          Welcome to React Native!
-        </Text>
+        <View key={this.props.currentUser.id}>
+          {this.renderChats()}
+        </View>
       </View>
     );
   }
