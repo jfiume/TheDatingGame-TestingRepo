@@ -18,6 +18,6 @@ module.exports = {
     const userId = req.params.id;
     User.findByIdAndRemove({ _id: userId })
       .then(user => res.status(204).send(user))
-      .cathc(next);
+      .catch(next);
   }
 };
