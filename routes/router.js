@@ -1,9 +1,8 @@
 const passport = require('passport');
 const AuthenticationController = require('../controllers/auth_controller');
 const UserController = require('../controllers/user_controller');
-const { create } = require('../controllers/user_controller');
-const ChatController = require('../controllers/chats_controller');
-const { allChats, showChat, createChat, destroyChat, socketChat } = require('../controllers/chats_controller');
+const ChatsController = require('../controllers/chats_controller');
+const MessagesController = require('../controllers/messages_controller');
 const passportService = require('./passport');
 
 
@@ -12,10 +11,6 @@ let requireLogin = passport.authenticate('local', {session: false});
 let router = require('express').Router();
 
 
-
-router.route('/test')
-  .post(UserController.test);
-
 // Auth Routes
 // -----------------------------------------------------------------------------
 // router.route('/signup')
@@ -23,37 +18,37 @@ router.route('/test')
 // router.route('/signin')
 //   .post([requireLogin, AuthenticationController.signin]);
 
-
-router.route('/signup')
-  .post(create);
-
 // User Routes
 // -----------------------------------------------------------------------------
-// router.route('/update')
-//   .patch(requireAuth, UserController.update);
 router.route('/show')
   .get([requireAuth, UserController.show]);
 router.route('/index')
   .get([requireAuth, UserController.index]);
 
-// Testing Postman
-// router.route('/new')
-//   .post(UserController.create);
-
-
 // Chat Routes
 // -----------------------------------------------------------------------------
 router.route('/chats')
-  .get(allChats);
+  .get(ChatsController.index);
 
 router.route('/chat')
-  .post(createChat);
+  .post(ChatsController.create);
 
 router.route('/chats/:id')
-  .get(showChat)
-  .delete(destroyChat);
+  .get(ChatsController.show)
+  .delete(ChatsController.destroy);
 
-// router.route('/')
-//   .get(socketChat);
+// Message Routes
+// -----------------------------------------------------------------------------
+  router.route('/messages')
+    .get(MessagesController.index);
 
+  router.route('/message')
+    .post(MessagesController.create);
+
+  router.route('/messages/:id')
+    .get(MessagesController.show)
+    .delete(MessagesController.destroy);
+
+
+// -----------------------------------------------------------------------------
 module.exports = router;
