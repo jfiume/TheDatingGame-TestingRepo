@@ -53,7 +53,7 @@ router.route('/chats/:id')
   .get(showChat)
   .delete(destroyChat);
 
-router.route('/')
-  .get(socketChat);
+// router.route('/')
+//   .get(socketChat);
 
 module.exports = router;

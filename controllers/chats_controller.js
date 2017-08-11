@@ -28,7 +28,6 @@ exports.showChat = function(req, res, next) {
 };
 
 exports.destroyChat = function(req, res, next) {
-  console.log("i am running");
   let {id} = req.params;
   Chat.findByIdAndRemove({_id: id}).then(res.send("deleted"));
 };
