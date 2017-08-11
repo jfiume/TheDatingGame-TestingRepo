@@ -4,6 +4,7 @@ import SignUp from './components/intro/SignUp';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
+import { Tabs } from './config/router';
 
 export default class App extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ export default class App extends Component {
     return ( user ?
       <Provider store={createStore(reducers)}>
         <View style={{flex: 1}}>
-          <Text> welcome {user.name}</Text>
+          <Tabs />
          </View>
        </Provider>
 
