@@ -11,4 +11,5 @@ module.exports = (app) => {
 
   app.get('/auth/user', UserController.find);
   app.put('/auth/user/:id', UserController.edit);
+  app.delete('/auth/user/:id', UserController.delete);
 };

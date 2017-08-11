@@ -12,12 +12,12 @@ module.exports = {
       .then(() => User.findById({ _id: userId }))
       .then(user => res.send(user))
       .catch(next);
-    // return User.update({ _id }, userProps);
   },
 
-
-  deleteUser(_id) {
-    User.remove({ _id });
+  delete(req, res, next) {
+    const userId = req.params.id;
+    User.findByIdAndRemove({ _id: userId })
+      .then(user => res.status(204).send(user))
+      .cathc(next);
   }
-
 };

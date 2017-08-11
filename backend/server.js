@@ -16,8 +16,6 @@ app.use(bodyParser.json());
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Set up auth routes
-
 routes(app);
 
 app.use((err, req, res, next) => {
