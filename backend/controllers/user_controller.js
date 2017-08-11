@@ -1,13 +1,15 @@
 const User = require('../models/user');
 
 module.exports = {
-  findUser(_id) {
+  find(_id) {
     return User.findById(_id);
   },
 
-  updateUser(req, res, next) {
+  edit(req, res, next) {
+    const userId = req.params.id;
     const userProps = req.body;
-    User.update(userProps)
+    User.findByIdAndUpdate({ _id: userId }, userProps)
+      .then(() => User.findById({ _id: userId }))
       .then(user => res.send(user))
       .catch(next);
     // return User.update({ _id }, userProps);

@@ -1,7 +1,14 @@
 const UserController = require('../controllers/user_controller');
+import {
+  facebookLogin,
+  facebookMiddleware,
+  oauthCallback,
+} from '../controllers/auth_controller';
 
 module.exports = (app) => {
-  app.get('/auth/user', UserController.findUser);
+  app.get('/auth/facebook', facebookLogin);
+  app.get('/auth/facebook/callback', facebookMiddleware, oauthCallback);
 
-  app.post('/auth/user/id', UserController.updateUser);
+  app.get('/auth/user', UserController.find);
+  app.put('/auth/user/:id', UserController.edit);
 };
