@@ -25,6 +25,9 @@ app.get('/auth/facebook', facebookLogin);
 app.get('/auth/facebook/callback', facebookMiddleware, oauthCallback);
 routes(app);
 
+app.use((err, req, res, next) => {
+  res.send({ error: err.message });
+});
 // Launch the server on the port 3000
 const server = app.listen(3000, () => {
   const { address, port } = server.address();

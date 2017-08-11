@@ -5,10 +5,11 @@ module.exports = {
     return User.findById(_id);
   },
 
-  updateUser(_id, res) {
+  updateUser(req, res, next) {
     const userProps = req.body;
     User.update(userProps)
-      .then(user => res.send(user));
+      .then(user => res.send(user))
+      .catch(next);
     // return User.update({ _id }, userProps);
   },
 
