@@ -9,27 +9,27 @@ import {
   View
 } from 'react-native';
 
-import ChatDetail from './components/chat/ChatDetail';
 
-export default class ChatIndex extends Component {
+
+export default class MatchDetail extends Component {
   constructor(props) {
     super(props);
   }
 
-  renderChats () {
-      let { chats } = this.props;
-      chats = chats.filter( chat => chat.user_id === this.props.currentUserId);
-      return chats.map ( chat => (
-        <ChatDetail key={chat.id} chat={chat}/>
-      ));
-    }
 
   render() {
-    const user = this.props.currentUser.id || "";
     return (
-      <View style={styles.container}>
-        <View key={this.props.currentUser.id}>
-          {this.renderChats()}
+      <View>
+        <View>
+          <Image
+            style={styles.icon}
+            source={require('../../../assets/images/girl.jpg')}
+          />
+        </View>
+        <View>
+          <Text style={styles.name}>
+            Grace
+          </Text>
         </View>
       </View>
     );
