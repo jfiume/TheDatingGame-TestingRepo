@@ -83,13 +83,13 @@ const styles = StyleSheet.create({
     // remove width and height to override fixed static size
     width: undefined,
     height: undefined,
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     // borderRadius: 4,
     // borderWidth: 0.5,
     // borderColor: 'blue',
   },
   header: {
-    marginTop: 200,
+    // marginTop: 50,
     alignItems: 'center',
     backgroundColor: 'transparent',
   },
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   instructions: {
     alignSelf: 'center',
     backgroundColor: 'transparent',
-    marginTop: -70
+    marginTop: 50
   },
   instructionsText: {
     fontSize: 16,
