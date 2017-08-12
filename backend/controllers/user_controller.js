@@ -1,8 +1,11 @@
 const User = require('../models/user');
 
 module.exports = {
-  find(_id) {
-    return User.findById(_id);
+  find(req, res, next) {
+    const userId = req.params.id;
+    User.findById({ _id: userId })
+      .then(user => res.send(user))
+      .catch(next);
   },
 
   edit(req, res, next) {

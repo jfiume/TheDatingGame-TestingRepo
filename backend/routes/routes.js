@@ -9,7 +9,7 @@ module.exports = (app) => {
   app.get('/auth/facebook', facebookLogin);
   app.get('/auth/facebook/callback', facebookMiddleware, oauthCallback);
 
-  app.get('/auth/user', UserController.find);
+  app.get('/auth/user/:id', UserController.find);
   app.put('/auth/user/:id', UserController.edit);
   app.delete('/auth/user/:id', UserController.delete);
 };
