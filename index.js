@@ -8,6 +8,7 @@ const http = require('http').Server(app);
 const io = require('socket.io')(http);
 const port = process.env.PORT || 3000;
 const chat = require('./socket.js');
+var request = require('request');
 
 // const server = http.createServer(function(req, res){
 //
@@ -33,26 +34,31 @@ app.get('/', function(req, res){
   res.sendFile(__dirname + '/socket_chat.html');
 });
 
-//
-// let users = 1;
-// io.on('connection', function(socket){
-//   users++;
-//   let user = {"user": users};
-//   console.log(user);
-//   socket.on('chat message', function(msg){
-//     let message = {authorId: users, messageOriginationTime: Date.now(), messageContent: msg};
-//     console.log(message);
-//     io.emit('chat message', msg);
-//     var chatString = JSON.stringify(message);
-//     console.log(chatString);
-//     return chatString;
-//   });
-// });
 
+let users = 1;
+io.on('connection', function(socket){
+  users++;
+  let user = {"user": users};
+  socket.on('chat message', function(msg){
+    let message = {authorId: users, messageOriginationTime: Date.now(), messageContent: msg};
+    io.emit('chat message', msg);
+    request({
+      method: 'POST',
+      url: 'http://localhost:3000/v1/message',
+      json: true,
+            headers: {
+                "Content-Type": "application/json",
+            },
+      body: message
+    }), function(error, response, body) {
+            console.log(response);
+          };
+  });
+});
 
-// http.listen(port, function(){
-//   console.log('listening on *:' + port);
-// });
+http.listen(port, function(){
+  console.log('listening on *:' + port);
+});
 // end socket chat
 
 app.listen(3000, '127.0.0.1', function(err) {
