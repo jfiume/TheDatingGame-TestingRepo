@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
   instructions: {
     alignSelf: 'center',
     backgroundColor: 'transparent',
-    marginTop: 50
+    marginTop: 70
   },
   instructionsText: {
     fontSize: 16,
