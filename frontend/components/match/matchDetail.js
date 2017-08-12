@@ -6,7 +6,11 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
+  Linking,
+  Image,
+  ImageBackground
 } from 'react-native';
 
 
@@ -14,21 +18,28 @@ import {
 export default class MatchDetail extends Component {
   constructor(props) {
     super(props);
+
   }
 
 
+
+
   render() {
+    const firstName = this.props.match.name.split(" ")[0];
+    const avatar = this.props.match.avatar;
     return (
-      <View>
-        <View>
-          <Image
-            style={styles.icon}
-            source={require('../../../assets/images/girl.jpg')}
-          />
+      <View style={styles.container}>
+        <View style={styles.viewcont}>
+          <TouchableOpacity>
+            <Image
+              style={styles.avatar}
+              source={{uri: avatar}}
+              />
+          </TouchableOpacity>
         </View>
         <View>
           <Text style={styles.name}>
-            Grace
+            {firstName}
           </Text>
         </View>
       </View>
@@ -38,8 +49,33 @@ export default class MatchDetail extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
+    marginTop: 10,
+    flexDirection: 'row',
     alignItems: 'center'
   },
+  avatar: {
+    height:56,
+    width:56,
+    borderColor: 'white',
+    borderWidth:2,
+    borderRadius: 20
+  },
+  viewcont: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 59,
+    height: 59,
+    borderColor: '#121212',
+    borderWidth: .5,
+    borderRadius: 22,
+    // backgroundColor: '#989898'
+
+  },
+  name: {
+    marginLeft: 15,
+    fontSize: 15,
+    color: '#121212',
+    fontFamily: 'AvenirNext-Medium',
+    // fontWeight: 'bold'
+  }
 });
