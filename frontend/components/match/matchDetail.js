@@ -47,21 +47,26 @@ export default class MatchDetail extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
     marginTop: 10,
     flexDirection: 'row',
     alignItems: 'center'
   },
   avatar: {
-    height:50,
-    width:50,
-    borderColor: 'black',
-    // borderWidth:1,
-    borderRadius: 25
+    height:55,
+    width:55,
+    borderColor: 'white',
+    borderWidth:2,
+    borderRadius: 20
+  },
+  imageContainer: {
+    width: 100,
+    height: 100,
+    backgroundColor: 'red'
+
   },
   name: {
     marginLeft: 20,
-    fontSize: 20,
+    fontSize: 15,
     color: '#363636',
     fontFamily: 'AvenirNext-Medium',
     // fontWeight: 'bold'
