@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
 import { Tabs } from './config/router';
+import {configureStore} from './store';
 
 export default class App extends Component {
   constructor(props) {
@@ -21,9 +22,10 @@ export default class App extends Component {
   }
 
   render() {
+    const store = configureStore();
     const { user } = this.state;
     return ( user ?
-      <Provider store={createStore(reducers)}>
+      <Provider store={store}>
         <View style={{flex: 1}}>
           <Tabs />
          </View>
