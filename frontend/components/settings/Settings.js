@@ -23,13 +23,12 @@ export default class UselessTextInput extends Component {
       education: '',
       about: '',
       interested_in: ''
-     };
-     this.handleSubmit = this.handleSubmit.bind(this);
+    };
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // use local state to update the user in the db. Will need to take the current Users info for other fields
   handleSubmit() {
-    debugger
     return this.state;
   }
 
@@ -44,64 +43,88 @@ export default class UselessTextInput extends Component {
     return (
       <View>
         <Text>Your age:</Text>
-        <TextInput
-          type="text"
-          style={styles.container}
-          value={this.state.age}
-          placeholder="E.g. 25"
-          onChangeText={(age) => this.setState({age})}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            type="text"
+            style={styles.container}
+            value={this.state.age}
+            placeholder="E.g. 25"
+            onChangeText={(age) => this.setState({age})}
+            />
+        </View>
+
         <Text>Prospect age min:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="18"
-          onChangeText={(age_range_low) => this.setState({age_range_low})}
-          value={this.state.age_range_low}
-          />
-          <Text>Prospect age max:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="30"
-          onChangeText={(age_range_high) => this.setState({age_range_high})}
-          value={this.state.age_range_high}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="18"
+            onChangeText={(age_range_low) => this.setState({age_range_low})}
+            value={this.state.age_range_low}
+            />
+        </View>
+
+        <Text>Prospect age max:</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="30"
+            onChangeText={(age_range_high) => this.setState({age_range_high})}
+            value={this.state.age_range_high}
+            />
+        </View>
+
         <Text>Your location:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="City Name (e.g. San Francisco)"
-          onChangeText={(location) => this.setState({location})}
-          value={this.state.location}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="City Name (e.g. San Francisco)"
+            onChangeText={(location) => this.setState({location})}
+            value={this.state.location}
+            />
+        </View>
+
         <Text>Your occupation:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="Doctor"
-          onChangeText={(occupation) => this.setState({occupation})}
-          value={this.state.occupation}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="Doctor"
+            onChangeText={(occupation) => this.setState({occupation})}
+            value={this.state.occupation}
+            />
+        </View>
+
         <Text>Your Education:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="State University"
-          onChangeText={(education) => this.setState({education})}
-          value={this.state.education}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="State University"
+            onChangeText={(education) => this.setState({education})}
+            value={this.state.education}
+            />
+        </View>
+
         <Text>About you:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="I love long walks on the beach"
-          onChangeText={(about) => this.setState({about})}
-          value={this.state.about}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="I love long walks on the beach"
+            onChangeText={(about) => this.setState({about})}
+            value={this.state.about}
+            />
+        </View>
+
         <Text>Interested In:</Text>
-        <TextInput
-          style={styles.container}
-          placeholder="Men, Women, or both"
-          onChangeText={(interested_in) => this.setState({interested_in})}
-          value={this.state.about}
-          />
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.container}
+            placeholder="Men, Women, or both"
+            onChangeText={(interested_in) => this.setState({interested_in})}
+            value={this.state.about}
+            />
+        </View>
+
         <TouchableOpacity onPress={this.handleSubmit}>
-            <Text>Submit</Text>
+          <Text>Submit</Text>
         </TouchableOpacity>
       </View>
     );
@@ -109,11 +132,15 @@ export default class UselessTextInput extends Component {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    backgroundColor: '#ededed',
+  inputContainer: {
+    padding: 5,
     paddingLeft: 10,
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1
+    margin: 10,
+    borderWidth: 2,
+    borderRadius: 10,
+    borderColor: "gray"
+  },
+  container: {
+    height: 26
   },
 });
