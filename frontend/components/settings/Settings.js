@@ -191,43 +191,44 @@ const styles = StyleSheet.create({
     padding: 7
   },
   topbarText: {
-    fontSize: 16,
+    fontSize: 20,
     textAlign: 'center',
-    color: '#121212',
+    color: '#565656',
     fontFamily: 'AvenirNext-Regular',
-    marginLeft: 8
+    marginLeft: 20
   },
   internalForm: {
     paddingTop: 20,
-    paddingLeft: 25,
-    paddingRight: 25
+    // paddingLeft: 25,
+    // paddingRight: 25
   },
   internalcont: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
-    paddingTop: 5
+    // justifyContent: 'space-between',
+    // paddingBottom: 8,
+    // borderWidth: 1,
+    // borderRadius: 5,
+    borderTopWidth: 0.5,
+    borderColor: '#D1D1D1',
+    // borderBottomWidth: 0.5,
+    // borderColor: "gray",
   },
   inputContainer: {
     height: 30,
     paddingLeft: 5,
     marginLeft: 10,
-    borderWidth: 1,
-    borderRadius: 5,
-    borderColor: "gray",
+
     minWidth: 200
   },
   formText: {
-    fontSize: 15,
+    fontSize: 18,
     fontFamily: 'AvenirNext-Medium',
-    color: '#121212',
+    color: '#464646',
   },
   textCont: {
     fontSize: 15,
     fontFamily: 'AvenirNext-Regular',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // alignSelf: 'center',
-    // alignContent: 'center'
+    padding: 5
   }
 });
