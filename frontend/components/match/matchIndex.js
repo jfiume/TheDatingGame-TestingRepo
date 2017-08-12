@@ -12,12 +12,27 @@ import {
   Image,
   ImageBackground
 } from 'react-native';
+import MatchDetail from './matchDetail';
+import {matches} from '../../reducers/ProspectList';
 
 
-// import ChatIndex from '../chat/ChatIndex';
-// import GameIndex from '../game/GameIndex';
 
 export default class MatchIndex extends Component {
+  constructor(props) {
+    super(props);
+    this.renderMatches = this.renderMatches.bind(this);
+  }
+
+  renderMatches () {
+      // let { matches } = this.props.currentUser;
+
+      // matches = matches.filter( match => match.user_id === this.props.currentUserId);
+      console.log(Array.isArray(matches));
+
+      return matches.map ( match => (
+        <MatchDetail key={match.id} match={match}/>
+      ));
+    }
   render() {
     return (
       <View style={styles.container}>
@@ -30,6 +45,7 @@ export default class MatchIndex extends Component {
             </TouchableOpacity>
           </View>
         </View>
+        {this.renderMatches()}
       </View>
     );
   }

@@ -6,7 +6,11 @@ import React, { Component } from 'react';
 import {
   StyleSheet,
   Text,
-  View
+  View,
+  TouchableOpacity,
+  Linking,
+  Image,
+  ImageBackground
 } from 'react-native';
 
 
@@ -14,10 +18,15 @@ import {
 export default class MatchDetail extends Component {
   constructor(props) {
     super(props);
+
   }
 
 
+
+
   render() {
+    const firstName = this.props.name.split(" ")[0];
+    console.log(this.props.match);
     return (
       <View>
         <View>
@@ -28,7 +37,7 @@ export default class MatchDetail extends Component {
         </View>
         <View>
           <Text style={styles.name}>
-            Grace
+            firstName
           </Text>
         </View>
       </View>
@@ -42,4 +51,10 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  icon: {
+
+  },
+  name: {
+
+  }
 });
