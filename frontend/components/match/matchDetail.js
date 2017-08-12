@@ -30,11 +30,13 @@ export default class MatchDetail extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.viewcont}>
-          <Image
-            style={styles.avatar}
-            source={{uri: avatar}}
-          />
-      </View>
+          <TouchableOpacity>
+            <Image
+              style={styles.avatar}
+              source={{uri: avatar}}
+              />
+          </TouchableOpacity>
+        </View>
         <View>
           <Text style={styles.name}>
             {firstName}
