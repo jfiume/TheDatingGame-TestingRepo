@@ -63,14 +63,14 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     width: 59,
     height: 59,
-    borderColor: '#D3D3D3',
-    borderWidth:1.5,
+    borderColor: '#121212',
+    borderWidth: .5,
     borderRadius: 22,
     // backgroundColor: '#989898'
 
   },
   name: {
-    marginLeft: 20,
+    marginLeft: 15,
     fontSize: 15,
     color: '#121212',
     fontFamily: 'AvenirNext-Medium',

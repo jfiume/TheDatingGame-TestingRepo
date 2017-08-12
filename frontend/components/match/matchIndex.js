@@ -79,13 +79,13 @@ const styles = StyleSheet.create({
   topbar: {
     flexDirection: 'row',
     // justifyContent: 'center',
-    marginTop:15,
+    marginTop:5,
     alignItems: 'center',
     borderTopWidth: 0.5,
     borderBottomWidth: 0.5,
     // borderWidth: 1,
     borderColor: '#D3D3D3',
-    padding: 5
+    padding: 7
   },
   topbarText: {
     fontSize: 16,
@@ -105,6 +105,8 @@ const styles = StyleSheet.create({
     flex: 1,
     marginLeft:10,
     justifyContent: 'flex-start',
-    alignItems: 'flex-start'
+    alignItems: 'flex-start',
+    paddingLeft: 7,
+    // paddingTop:2
   }
 });
