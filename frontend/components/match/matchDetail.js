@@ -29,12 +29,12 @@ export default class MatchDetail extends Component {
     const avatar = this.props.match.avatar;
     return (
       <View style={styles.container}>
-        <View style={styles.imageConatiner}>
+        <View style={styles.viewcont}>
           <Image
             style={styles.avatar}
             source={{uri: avatar}}
           />
-        </View>
+      </View>
         <View>
           <Text style={styles.name}>
             {firstName}
@@ -52,22 +52,27 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   avatar: {
-    height:55,
-    width:55,
+    height:56,
+    width:56,
     borderColor: 'white',
     borderWidth:2,
     borderRadius: 20
   },
-  imageContainer: {
-    width: 100,
-    height: 100,
-    backgroundColor: 'red'
+  viewcont: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 59,
+    height: 59,
+    borderColor: '#D3D3D3',
+    borderWidth:1.5,
+    borderRadius: 22,
+    // backgroundColor: '#989898'
 
   },
   name: {
     marginLeft: 20,
     fontSize: 15,
-    color: '#363636',
+    color: '#121212',
     fontFamily: 'AvenirNext-Medium',
     // fontWeight: 'bold'
   }

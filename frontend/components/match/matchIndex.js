@@ -42,6 +42,14 @@ export default class MatchIndex extends Component {
           </Text>
 
         </View>
+        <View style={styles.topbar}>
+          <Text style={styles.topbarText}>
+            Conversations
+          </Text>
+          <Text style={styles.topbarText2}>
+            (Recent)
+          </Text>
+        </View>
         <View style={styles.images}>
           {this.renderMatches()}
         </View>
@@ -67,6 +75,26 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'rgb(252, 192, 27)',
     fontFamily: 'AvenirNext-Medium',
+  },
+  topbar: {
+    flexDirection: 'row',
+    // justifyContent: 'center',
+    marginTop:15,
+    alignItems: 'center'
+  },
+  topbarText: {
+    fontSize: 15,
+    textAlign: 'center',
+    color: '#121212',
+    fontFamily: 'AvenirNext-Regular',
+    marginLeft: 8
+  },
+  topbarText2: {
+    fontSize: 15,
+    textAlign: 'center',
+    color: '#868686',
+    fontFamily: 'AvenirNext-Regular',
+    marginLeft:5
   },
   images: {
     flex: 1,
