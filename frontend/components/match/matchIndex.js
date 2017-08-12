@@ -42,7 +42,9 @@ export default class MatchIndex extends Component {
           </Text>
 
         </View>
-        {this.renderMatches()}
+        <View style={styles.images}>
+          {this.renderMatches()}
+        </View>
       </View>
     );
   }
@@ -51,7 +53,7 @@ export default class MatchIndex extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     padding: 10,
   },
   navbar: {
@@ -65,5 +67,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'rgb(252, 192, 27)',
     fontFamily: 'AvenirNext-Medium',
+  },
+  images: {
+    flex: 1,
+    marginLeft:10,
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start'
   }
 });

@@ -29,7 +29,7 @@ export default class MatchDetail extends Component {
     const avatar = this.props.match.avatar;
     return (
       <View style={styles.container}>
-        <View>
+        <View style={styles.imageConatiner}>
           <Image
             style={styles.avatar}
             source={{uri: avatar}}
@@ -47,19 +47,20 @@ export default class MatchDetail extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    // alignItems: 'center',
-    // padding: 10,
-    marginTop:25,
-    
+    // flex: 1,
+    marginTop: 10,
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   avatar: {
-    height:60,
-    width:60
+    height:50,
+    width:50,
+    borderColor: 'black',
+    // borderWidth:1,
+    borderRadius: 25
   },
   name: {
-    marginLeft: 7,
+    marginLeft: 20,
     fontSize: 20,
     color: '#363636',
     fontFamily: 'AvenirNext-Medium',
