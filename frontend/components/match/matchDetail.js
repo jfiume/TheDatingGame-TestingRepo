@@ -26,18 +26,18 @@ export default class MatchDetail extends Component {
 
   render() {
     const firstName = this.props.match.name.split(" ")[0];
-    console.log(this.props.match);
+    const avatar = this.props.match.avatar;
     return (
-      <View>
+      <View style={styles.container}>
         <View>
           <Image
-            style={styles.icon}
-            source={require('../../../assets/images/girl.jpg')}
+            style={styles.avatar}
+            source={{uri: avatar}}
           />
         </View>
         <View>
           <Text style={styles.name}>
-            firstName
+            {firstName}
           </Text>
         </View>
       </View>
@@ -49,12 +49,20 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center'
+    // alignItems: 'center',
+    // padding: 10,
+    marginTop:25,
+    
   },
-  icon: {
-
+  avatar: {
+    height:60,
+    width:60
   },
   name: {
-
+    marginLeft: 7,
+    fontSize: 20,
+    color: '#363636',
+    fontFamily: 'AvenirNext-Medium',
+    // fontWeight: 'bold'
   }
 });

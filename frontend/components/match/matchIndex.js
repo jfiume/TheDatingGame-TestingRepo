@@ -27,7 +27,6 @@ export default class MatchIndex extends Component {
       // let { matches } = this.props.currentUser;
 
       // matches = matches.filter( match => match.user_id === this.props.currentUserId);
-      console.log(Array.isArray(matches));
 
       return matches.map ( match => (
         <MatchDetail key={match.id} match={match}/>
@@ -36,6 +35,13 @@ export default class MatchIndex extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.navbar}>
+
+          <Text style={styles.navbarText}>
+            theDatingGame
+          </Text>
+
+        </View>
         {this.renderMatches()}
       </View>
     );
@@ -47,5 +53,17 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'space-between',
     padding: 10,
+  },
+  navbar: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop:15,
+    alignItems: 'center'
+  },
+  navbarText: {
+    fontSize: 29,
+    textAlign: 'center',
+    color: 'rgb(252, 192, 27)',
+    fontFamily: 'AvenirNext-Medium',
   }
 });
