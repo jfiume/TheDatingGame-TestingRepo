@@ -28,7 +28,6 @@ module.exports = {
   },
 
   destroy(req, res, next) {
-    console.log("i am running");
     let {id} = req.params;
     Message.findByIdAndRemove({_id: id}).then(res.send("deleted"));
   },
