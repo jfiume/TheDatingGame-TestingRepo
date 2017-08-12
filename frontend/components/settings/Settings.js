@@ -43,12 +43,17 @@ export default class UselessTextInput extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.navbar}>
-
           <Text style={styles.navbarText}>
             theDatingGame
           </Text>
-
         </View>
+
+        <View style={styles.topbar}>
+          <Text style={styles.topbarText}>
+            Profile Settings
+          </Text>
+        </View>
+
         <View style={styles.internalcont}>
           <Text>My age:</Text>
           <View style={styles.inputContainer}>
@@ -157,7 +162,7 @@ export default class UselessTextInput extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'space-between',
+    // justifyContent: 'space-between',
     padding: 10,
   },
   navbar: {
@@ -171,6 +176,24 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: 'rgb(252, 192, 27)',
     fontFamily: 'AvenirNext-Medium',
+  },
+  topbar: {
+    flexDirection: 'row',
+    // justifyContent: 'center',
+    marginTop:5,
+    alignItems: 'center',
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5,
+    // borderWidth: 1,
+    borderColor: '#D3D3D3',
+    padding: 7
+  },
+  topbarText: {
+    fontSize: 16,
+    textAlign: 'center',
+    color: '#121212',
+    fontFamily: 'AvenirNext-Regular',
+    marginLeft: 8
   },
   inputContainer: {
     // padding: 5,
