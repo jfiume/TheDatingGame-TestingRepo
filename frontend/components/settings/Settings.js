@@ -56,7 +56,7 @@ export default class UselessTextInput extends Component {
 
         <View style={styles.internalForm}>
           <View style={styles.internalcont}>
-            <Text>My age:</Text>
+            <Text style={styles.formText}>My age:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 type="text"
@@ -69,7 +69,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>City:</Text>
+            <Text style={styles.formText}>City:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -81,7 +81,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>Occupation:</Text>
+            <Text style={styles.formText}>Occupation:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -93,7 +93,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>Education:</Text>
+            <Text style={styles.formText}>Education:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -105,7 +105,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>About me:</Text>
+            <Text style={styles.formText}>About me:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -117,7 +117,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>Interested In:</Text>
+            <Text style={styles.formText}>Interested In:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -129,7 +129,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>Min age:</Text>
+            <Text style={styles.formText}>Min age:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -141,7 +141,7 @@ export default class UselessTextInput extends Component {
           </View>
 
           <View style={styles.internalcont}>
-            <Text>Max age:</Text>
+            <Text style={styles.formText}>Max age:</Text>
             <View style={styles.inputContainer}>
               <TextInput
                 style={styles.textCont}
@@ -212,6 +212,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   textCont: {
-    // height: 26
+    fontSize: 12,
+    fontFamily: 'AvenirNext-Regular',
   }
 });
