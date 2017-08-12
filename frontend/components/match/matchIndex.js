@@ -17,7 +17,7 @@ import MatchDetail from './matchDetail';
 import {matches} from '../../reducers/ProspectList';
 
 
-export default class MatchIndex extends Component {
+class MatchIndex extends Component {
   constructor(props) {
     super(props);
     this.renderMatches = this.renderMatches.bind(this);
