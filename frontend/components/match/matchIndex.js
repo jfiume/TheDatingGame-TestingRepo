@@ -62,12 +62,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // justifyContent: 'space-between',
-    padding: 10,
+    paddingTop: 10,
   },
   navbar: {
     flexDirection: 'row',
     justifyContent: 'center',
-    marginTop:15,
+    marginTop:12,
     alignItems: 'center'
   },
   navbarText: {
@@ -80,17 +80,22 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     // justifyContent: 'center',
     marginTop:15,
-    alignItems: 'center'
+    alignItems: 'center',
+    borderTopWidth: 0.5,
+    borderBottomWidth: 0.5,
+    // borderWidth: 1,
+    borderColor: '#D3D3D3',
+    padding: 5
   },
   topbarText: {
-    fontSize: 15,
+    fontSize: 16,
     textAlign: 'center',
     color: '#121212',
     fontFamily: 'AvenirNext-Regular',
     marginLeft: 8
   },
   topbarText2: {
-    fontSize: 15,
+    fontSize: 16,
     textAlign: 'center',
     color: '#868686',
     fontFamily: 'AvenirNext-Regular',
