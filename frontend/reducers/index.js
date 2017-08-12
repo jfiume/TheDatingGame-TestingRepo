@@ -1,6 +1,11 @@
-import { combineReducers } from 'redux';
-import ProspectDetailReducer from './ProspectDetailReducer';
+module.exports = (state={}, action) => {
+  switch (action.type) {
+    case 'CHANGE_TEXT':
+      return {
+        text: action.text
+      };
 
-export default combineReducers({
-  ProspectDetail: ProspectDetailReducer
-});
+    default:
+      return state;
+  }
+};

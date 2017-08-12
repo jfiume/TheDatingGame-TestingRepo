@@ -3,6 +3,7 @@
 // Local state will update onPress, toggling between ChatIndex and GameIndex
 
 import React, { Component } from 'react';
+import {connect} from 'react-redux';
 import {
   StyleSheet,
   Text,
@@ -14,7 +15,6 @@ import {
 } from 'react-native';
 import MatchDetail from './matchDetail';
 import {matches} from '../../reducers/ProspectList';
-
 
 
 export default class MatchIndex extends Component {
@@ -110,3 +110,11 @@ const styles = StyleSheet.create({
     // paddingTop:2
   }
 });
+
+const mapStateToProps = state => {
+  return {
+    text: state.text
+  };
+};
+
+export default connect(mapStateToProps)(MatchIndex);
