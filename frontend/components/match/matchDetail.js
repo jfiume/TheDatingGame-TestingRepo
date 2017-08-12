@@ -25,7 +25,7 @@ export default class MatchDetail extends Component {
 
 
   render() {
-    const firstName = this.props.name.split(" ")[0];
+    const firstName = this.props.match.name.split(" ")[0];
     console.log(this.props.match);
     return (
       <View>
