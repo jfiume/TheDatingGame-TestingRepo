@@ -42,8 +42,15 @@ export default class UselessTextInput extends Component {
   render() {
     return (
       <View style={styles.container}>
+        <View style={styles.navbar}>
+
+          <Text style={styles.navbarText}>
+            theDatingGame
+          </Text>
+
+        </View>
         <View style={styles.internalcont}>
-          <Text>Your age:</Text>
+          <Text>My age:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               type="text"
@@ -56,7 +63,7 @@ export default class UselessTextInput extends Component {
         </View>
 
         <View style={styles.internalcont}>
-          <Text>Prospect age min:</Text>
+          <Text>Min age:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.textCont}
@@ -68,7 +75,7 @@ export default class UselessTextInput extends Component {
         </View>
 
         <View style={styles.internalcont}>
-          <Text>Prospect age max:</Text>
+          <Text>Max age:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.textCont}
@@ -80,11 +87,11 @@ export default class UselessTextInput extends Component {
         </View>
 
         <View style={styles.internalcont}>
-          <Text>Your location:</Text>
+          <Text>City:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.textCont}
-              placeholder="City Name (e.g. San Francisco)"
+              placeholder="San Francisco"
               onChangeText={(location) => this.setState({location})}
               value={this.state.location}
               />
@@ -92,7 +99,7 @@ export default class UselessTextInput extends Component {
         </View>
 
         <View style={styles.internalcont}>
-          <Text>Your occupation:</Text>
+          <Text>Occupation:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.textCont}
@@ -104,7 +111,7 @@ export default class UselessTextInput extends Component {
         </View>
 
         <View style={styles.internalcont}>
-          <Text>Your Education:</Text>
+          <Text>Education:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.textCont}
@@ -116,11 +123,11 @@ export default class UselessTextInput extends Component {
         </View>
 
         <View style={styles.internalcont}>
-          <Text>About you:</Text>
+          <Text>About me:</Text>
           <View style={styles.inputContainer}>
             <TextInput
               style={styles.textCont}
-              placeholder="I love long walks on the beach"
+              placeholder="I love long walks on..."
               onChangeText={(about) => this.setState({about})}
               value={this.state.about}
               />
@@ -153,13 +160,29 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     padding: 10,
   },
+  navbar: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    marginTop:15,
+    alignItems: 'center'
+  },
+  navbarText: {
+    fontSize: 29,
+    textAlign: 'center',
+    color: 'rgb(252, 192, 27)',
+    fontFamily: 'AvenirNext-Medium',
+  },
   inputContainer: {
-    padding: 5,
+    // padding: 5,
     paddingLeft: 10,
-    margin: 10,
+    marginLeft: 10,
     borderWidth: 2,
-    borderRadius: 10,
+    borderRadius: 5,
     borderColor: "gray"
+  },
+  internalcont: {
+    flexDirection: 'row',
+    alignItems: 'center'
   },
   textCont: {
     // height: 26

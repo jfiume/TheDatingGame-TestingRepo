@@ -36,11 +36,9 @@ class MatchIndex extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.navbar}>
-
           <Text style={styles.navbarText}>
             theDatingGame
           </Text>
-
         </View>
         <View style={styles.topbar}>
           <Text style={styles.topbarText}>
