@@ -72,14 +72,6 @@ export default class Instructions extends Component {
             </Text>
           </View>
         </View>
-
-        <View style={styles.next}>
-        <TouchableOpacity >
-          <Text style={styles.nextButton}>
-            X
-          </Text>
-        </TouchableOpacity>
-        </View>
       </ImageBackground>
     );
   }
