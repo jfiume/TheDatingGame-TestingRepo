@@ -58,23 +58,11 @@ export default class ProspectDetails extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.navbar}>
-          <View style={styles.navbar_icons}>
-            <TouchableOpacity >
-              <Image
-                style={styles.icon}
-                source={require('../../../assets/images/settings.png')} />
-            </TouchableOpacity>
-          </View>
+
           <Text style={styles.navbarText}>
             theDatingGame
           </Text>
-          <View style={styles.navbar_icons}>
-            <TouchableOpacity >
-              <Image
-                style={styles.icon}
-                source={require('../../../assets/images/matches.png')} />
-            </TouchableOpacity>
-          </View>
+
         </View>
         <View style={styles.imageContainer}>
           <GestureRecognizer
@@ -136,7 +124,7 @@ const styles = StyleSheet.create({
 
   navbar: {
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     marginTop:15,
     alignItems: 'center'
   },
