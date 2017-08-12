@@ -54,100 +54,102 @@ export default class UselessTextInput extends Component {
           </Text>
         </View>
 
-        <View style={styles.internalcont}>
-          <Text>My age:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              type="text"
-              style={styles.textCont}
-              value={this.state.age}
-              placeholder="E.g. 25"
-              onChangeText={(age) => this.setState({age})}
-              />
+        <View style={styles.internalForm}>
+          <View style={styles.internalcont}>
+            <Text>My age:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                type="text"
+                style={styles.textCont}
+                value={this.state.age}
+                placeholder="E.g. 25"
+                onChangeText={(age) => this.setState({age})}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>Min age:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="18"
-              onChangeText={(age_range_low) => this.setState({age_range_low})}
-              value={this.state.age_range_low}
-              />
+          <View style={styles.internalcont}>
+            <Text>City:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="San Francisco"
+                onChangeText={(location) => this.setState({location})}
+                value={this.state.location}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>Max age:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="30"
-              onChangeText={(age_range_high) => this.setState({age_range_high})}
-              value={this.state.age_range_high}
-              />
+          <View style={styles.internalcont}>
+            <Text>Occupation:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="Doctor"
+                onChangeText={(occupation) => this.setState({occupation})}
+                value={this.state.occupation}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>City:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="San Francisco"
-              onChangeText={(location) => this.setState({location})}
-              value={this.state.location}
-              />
+          <View style={styles.internalcont}>
+            <Text>Education:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="State University"
+                onChangeText={(education) => this.setState({education})}
+                value={this.state.education}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>Occupation:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="Doctor"
-              onChangeText={(occupation) => this.setState({occupation})}
-              value={this.state.occupation}
-              />
+          <View style={styles.internalcont}>
+            <Text>About me:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="I love long walks on..."
+                onChangeText={(about) => this.setState({about})}
+                value={this.state.about}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>Education:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="State University"
-              onChangeText={(education) => this.setState({education})}
-              value={this.state.education}
-              />
+          <View style={styles.internalcont}>
+            <Text>Interested In:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="Men, Women, or both"
+                onChangeText={(interested_in) => this.setState({interested_in})}
+                value={this.state.about}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>About me:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="I love long walks on..."
-              onChangeText={(about) => this.setState({about})}
-              value={this.state.about}
-              />
+          <View style={styles.internalcont}>
+            <Text>Min age:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="18"
+                onChangeText={(age_range_low) => this.setState({age_range_low})}
+                value={this.state.age_range_low}
+                />
+            </View>
           </View>
-        </View>
 
-        <View style={styles.internalcont}>
-          <Text>Interested In:</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.textCont}
-              placeholder="Men, Women, or both"
-              onChangeText={(interested_in) => this.setState({interested_in})}
-              value={this.state.about}
-              />
+          <View style={styles.internalcont}>
+            <Text>Max age:</Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                style={styles.textCont}
+                placeholder="30"
+                onChangeText={(age_range_high) => this.setState({age_range_high})}
+                value={this.state.age_range_high}
+                />
+            </View>
           </View>
         </View>
 
@@ -163,7 +165,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     // justifyContent: 'space-between',
-    padding: 10,
+    paddingTop: 10,
   },
   navbar: {
     flexDirection: 'row',
@@ -197,15 +199,17 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     // padding: 5,
-    paddingLeft: 10,
+    paddingLeft: 5,
     marginLeft: 10,
     borderWidth: 2,
     borderRadius: 5,
-    borderColor: "gray"
+    borderColor: "gray",
+    minWidth: 200
   },
   internalcont: {
     flexDirection: 'row',
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'space-between'
   },
   textCont: {
     // height: 26
