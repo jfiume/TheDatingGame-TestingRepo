@@ -1,11 +1,11 @@
 import React from 'react';
-
 import { GiftedChat } from 'react-native-gifted-chat';
+const request = require('request');
 
 class Chat extends React.Component {
-  state = {
-    messages: [],
-  }
+  // state = {
+  //   messages: [],
+  // }
 
   componentWillMount() {
 
@@ -19,7 +19,7 @@ class Chat extends React.Component {
       user: this.props.user_id,
       messageOriginationTime: Date.now(),
       messageContent: messages[-1]
-    }
+    };
     request({
       method: 'POST',
       url: 'localhost:3000/message',
@@ -27,8 +27,8 @@ class Chat extends React.Component {
       headers: {
           "Content-Type": "application/json",
       },
-      body: message
-    }), function(error, response, body) {
+      body: messages[-1]
+    }), function(error) {
       return error;
     };
   }
@@ -38,7 +38,7 @@ class Chat extends React.Component {
       <GiftedChat
         messages={this.state.messages}
         onSend={(messages) => {
-          this.onSend(messages)
+          this.onSend(messages);
         }}
         user={
           {

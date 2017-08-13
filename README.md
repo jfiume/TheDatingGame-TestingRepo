@@ -2,7 +2,7 @@
 
 The Dating Game is a mobile dating app that reimagines the mobile dating experience. Like other dating apps, users will be able to match and chat with other users in their area. However, after matching, the two users will be prompted with a game to play as an ice breaker.
 
-<img src='./docs/sign_in_page.png' />
+<img src='./assets/images/screenshots/sign_in_page.png' />
 
 ## Background and Overview
 
@@ -16,17 +16,19 @@ Our approach:
   * Prompt them to play a fun, yet simple game to organically provide a conversation starter
   * Provide them with full chat functionality to get to know one another
 
-  ## Functionality & MVP   
-    - [ ] Learn and implement a MERNN stack (MongoDB, Express, React-Native, Node.js)
-    - [ ] Sign up users that create a profile and specify prospect criteria
-    - [ ] OAuth
+<img src='./assets/images/screenshots/instructions_page.png' />
+
+  ### Functionality & MVP   
+  - [ ] Learn and implement a MERNN stack (Mongo DB, Express, React-Native, Node.js)
+  - [ ] OAuth
+  - [ ] Sign up users that create a profile and specify prospect criteria
+  - [ ] Users can be matched with other users
 
   #### Bonus Features
-    - [ ] Users can be matched with other users
-    - [ ] Allow chat functionality between users
-    - [ ] Users can play games
-    - [ ] Users can add multiple photos
-    - [ ] Users can play additional rounds
+  - [ ] Allow chat functionality between users
+  - [ ] Users can play games
+  - [ ] Users can add multiple photos
+  - [ ] Users can play additional rounds
 
 # Technology
 
