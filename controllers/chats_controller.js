@@ -2,7 +2,6 @@ const User = require('../models/chats');
 const Messages = require('../models/messages');
 const TextGames = require('../models/text_games');
 const Chat = require('../models/chats');
-const chat = require('../socket.js');
 
 module.exports = {
   create(req, res, next) {
@@ -19,6 +18,12 @@ module.exports = {
               return chatMap;
           }, {}));
     });
+  },
+
+  edit(req, res, next) {
+    const userId = req.params.id;
+    const chatId = req.params.chat.id;
+    Chat.findByIdAndUpdate({_id: chatId}, messages.push()).then();
   },
 
   show(req, res, next) {

@@ -11,18 +11,27 @@ app.get('/', function(req, res){
 });
 
 
+let chatId = "598cadb099ee96414fba8bc8";
+let userId = 1;
 
 io.on('connection', function(socket){
-  socket.on('chat message', function(msg){
+  // console.log(io);
+  let handshake = socket.handshake.query;
+  handshake.query = { chatId: chatId };
+  console.log(handshake);
+  let room = `room ${handshake}`;
+  console.log(room);
+  socket.join(room, function(msg, error) {
     let message = {
-      user: user,
+      authorId: userId,
       messageOriginationTime: Date.now(),
       messageContent: msg
     };
+    error => {}
     io.emit('chat message', msg);
     request({
       method: 'POST',
-      url: location.origin + '/message',
+      url: 'localhost:3000/v1/message',
       json: true,
       headers: {
           "Content-Type": "application/json",
