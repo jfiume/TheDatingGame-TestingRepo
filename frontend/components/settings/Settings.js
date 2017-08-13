@@ -152,12 +152,14 @@ export default class UselessTextInput extends Component {
             </View>
           </View>
         </View>
+        <View style={styles.button}>
+          <TouchableOpacity onPress={this.handleSubmit}>
+            <View style={styles.submitButton}>
+              <Text style={styles.submitText}>Submit</Text>
+            </View>
+          </TouchableOpacity>
 
-        <TouchableOpacity onPress={this.handleSubmit}>
-          <View style={styles.submitButton}>
-            <Text style={styles.submitText}>Submit</Text>
-          </View>
-        </TouchableOpacity>
+        </View>
       </View>
     );
   }
@@ -166,7 +168,6 @@ export default class UselessTextInput extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // justifyContent: 'space-between',
     paddingTop: 10,
   },
   navbar: {
@@ -207,15 +208,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderTopWidth: 0.5,
     borderColor: '#D1D1D1',
-    // justifyContent: 'center'
     alignContent: 'center',
     paddingLeft: 20,
     paddingTop: 5
   },
   inputContainer: {
     height: 30,
-    // paddingLeft: 5,
-    // marginLeft: 5,
     minWidth: 200
   },
   formText: {
@@ -229,16 +227,23 @@ const styles = StyleSheet.create({
     padding: 6
   },
   submitButton: {
+    marginTop: 50,
     alignItems:'center',
-    borderColor: "grey",
+    borderColor: "#868686",
     borderWidth: 1,
-    padding: 5
-
+    borderRadius: 5,
+    width: 300,
+    justifyContent: 'center',
+    alignContent: 'center',
+    backgroundColor: 'rgba(249, 199, 55, 0.7)'
   },
   submitText: {
     padding: 5,
     fontSize: 18,
     fontFamily: 'AvenirNext-Medium',
-    color: '#464646',
+    color: '#565656',
+  },
+  button: {
+    alignItems:'center'
   }
 });
