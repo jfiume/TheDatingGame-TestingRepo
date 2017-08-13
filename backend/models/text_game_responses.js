@@ -1,13 +1,10 @@
-const mongoose = require('mongoose');
-const uuid = require('uuid');
-
-const Schema = mongoose.Schema;
-
-mongoose.connect('mongodb://localhost/TheDatingGame');
+import mongoose, { Schema } from 'mongoose';
 
 const textGamesResponsesSchema = new Schema({
-  Objectid: {
-    authorId: { type: Number },
-    response: { type: String }
-  }
+  authorId: Number,
+  response: String
 });
+
+const textGamesResponses = mongoose.model('textGamesResponses', textGamesResponsesSchema);
+
+module.exports = textGamesResponses;
