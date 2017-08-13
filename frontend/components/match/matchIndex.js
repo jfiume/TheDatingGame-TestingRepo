@@ -17,7 +17,7 @@ import MatchDetail from './matchDetail';
 import {matches} from '../../reducers/ProspectList';
 
 
-export default class MatchIndex extends Component {
+class MatchIndex extends Component {
   constructor(props) {
     super(props);
     this.renderMatches = this.renderMatches.bind(this);
@@ -36,11 +36,9 @@ export default class MatchIndex extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.navbar}>
-
           <Text style={styles.navbarText}>
             theDatingGame
           </Text>
-
         </View>
         <View style={styles.topbar}>
           <Text style={styles.topbarText}>
