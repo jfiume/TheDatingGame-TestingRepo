@@ -2,6 +2,12 @@
 
 The Dating Game is a mobile dating app that reimagines the mobile dating experience. Like other dating apps, users will be able to match and chat with other users in their area. However, after matching, the two users will be prompted with a game to play as an ice breaker.
 
+### Built by:
+**Chris Comings**,
+**Joseph Fiume**,
+**Ryan Rolfes**,
+**Younis Hamalawy**
+
 <img src='./assets/images/screenshots/sign_in_page.png' />
 
 ## Background and Overview

@@ -32,7 +32,7 @@ section {
   float: left;
   position: relative;
   width: 20%;
-  left: 150px;
+  left: 20%;
 }
 
 img {
@@ -43,7 +43,7 @@ img {
 .tag-line {
   float: left;
   position: relative;
-  left: 150px;
+  left: 20%;
   font-size: 1.5em;
   text-align: right;
 }
@@ -59,4 +59,22 @@ img {
   border-bottom: 2px solid #333333;
   border-left: 2px solid #CCCCCC;
   border-radius: 10%;
+}
+
+footer img {
+  height: 200px;
+  width: 200px;
+}
+
+.logo-links {
+  height: 50px;
+  width: 50px;
+  margin: 0px;
+  margin-top: 20px;
+}
+
+footer span {
+  font-size: 2em;
+  color: white;
+  margin-left: 20px;
 }
